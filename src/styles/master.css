@@ -1,0 +1,156 @@
+.container {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+}
+
+body{
+  -webkit-animation: color-change-3x 4s linear infinite alternate both;
+	        animation: color-change-3x 4s linear infinite alternate both;
+}
+
+a {
+  text-decoration: none;
+  color: #f6f1ed;
+}
+
+.selector {
+  color: black;
+  display: in-line;
+}
+
+.menuButton {
+    marginLeft: -12px;
+    marginRight: 20px;
+  }
+
+.topbar {
+  margin-top: 0;
+
+}
+
+.typedTitle {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 4px;
+  font-size: 64px;
+  font-weight: 500;
+  margin: auto;
+  text-align: center;
+  color: #f6f1ed;
+}
+
+.lineBreak {
+  transition: width 2s;
+  height: 4px;
+  /* background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(246,245,255,1) 50%, rgba(0,0,0,1) 100%); */
+  background-color: #f6f1ed;
+  margin: auto;
+  transition-timing-function: ease;
+  border-radius: 20px;
+}
+
+.typedMenu {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: auto;
+  margin-top: 18px;
+  width: 100%;
+  text-align: center;
+  color: #f6f1ed;
+  transition: color 1s, font-size .5s;
+}
+
+.typedMenu:hover {
+  cursor: pointer;
+  font-size: 22px;
+}
+.navBarTitle {
+  color: #f6f1ed;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 3px;
+  font-size: 26px;
+  margin-top: 8px;
+}
+
+.navBarIcon {
+  color: #f6f1ed;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  margin-top: 8px;
+  transition: color .25s;
+  transition-timing-function: linear;
+}
+.navBarIcon:hover {
+  cursor: pointer;
+  color: #30231d;
+}
+.scrollArrow {
+  animation-name: scrollDownPulse;
+  animation-duration: 1.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+.scrollArrow:hover {
+  cursor: pointer;
+}
+
+/* Set Up Grid System */
+
+
+@keyframes scrollDownPulse {
+  0% {
+    opacity: 0;
+    margin-top: 0;
+  }
+  50% {
+    opacity: .8;
+    margin-top: 25%;
+  }
+  100% {
+    opacity: 0;
+    margin-top: 50%;
+  }
+}
+
+@-webkit-keyframes scrollDownPulse {
+  0% {
+    opacity: 0;
+    margin-top: 0;
+  }
+  50% {
+    opacity: .8;
+    margin-top: 25%;
+  }
+  100% {
+    opacity: 0;
+    margin-top: 50%;
+  }
+}
+
+
+@-webkit-keyframes color-change-3x {
+  0% {
+    background: #6a5750;
+  }
+  50% {
+    bcakground: #30231d;
+  }
+  100% {
+    background: #b5a397;
+  }
+}
+@keyframes color-change-3x {
+  0% {
+    background: #6a5750;
+  }
+  50% {
+    bcakground: #30231d;
+  }
+  100% {
+    background: #b5a397;
+  }
+}
