@@ -127,7 +127,9 @@ class Home extends Component {
               textAlign: 'center',
               color: '#f6f1ed',
             }}>
-            <FontAwesomeIcon icon={faChevronDown} size='lg' className='scrollArrow' />
+            <Fade big delay={2500}>
+              <FontAwesomeIcon icon={faChevronDown} size='lg' className='scrollArrow' />
+            </Fade>
           </Block>
 
 
