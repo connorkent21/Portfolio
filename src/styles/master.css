@@ -5,8 +5,13 @@
 }
 
 body{
+  box-sizing: border-box;
   -webkit-animation: color-change-3x 4s linear infinite alternate both;
-	        animation: color-change-3x 4s linear infinite alternate both;
+  animation: color-change-3x 4s linear infinite alternate both;
+}
+
+body *, body *:before, body *:after {
+  box-sizing: inherit;
 }
 
 a {
@@ -27,6 +32,15 @@ a {
 .topbar {
   margin-top: 0;
 
+}
+
+.navBar {
+  transition: box-shadow .5s, height .5s;
+  display: table;
+}
+
+.navBar:hover {
+  box-shadow: 0 0 14px black;
 }
 
 .typedTitle {
@@ -51,8 +65,8 @@ a {
 }
 
 .typedMenu {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   font-weight: 500;
   margin: auto;
   margin-top: 18px;
@@ -60,18 +74,45 @@ a {
   text-align: center;
   color: #f6f1ed;
   transition: color 1s, font-size .5s;
+  background-color: transparent;
+  border-radius: 15px;
+  width: 10%;
+  align-items: center;
+  align-content: center;
+  height: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(to left,
+    transparent,
+    transparent 50%,
+    #64706c 50%,
+    #64706c);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all .25s ease-in;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 2px;
+  text-align: center;
 }
 
 .typedMenu:hover {
   cursor: pointer;
-  font-size: 22px;
+  background-position: 0 0;
+  height: 24px;
 }
+
+
 .navBarTitle {
+  transition: font-size .25s;
   color: #f6f1ed;
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 3px;
   font-size: 26px;
   margin-top: 8px;
+  opacity: 1;
+  transition-timing-function: linear;
+  top: 50%;
 }
 
 .navBarIcon {
@@ -79,8 +120,10 @@ a {
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   margin-top: 8px;
-  transition: color .25s;
+  transition: color .25s, font-size .25s;
   transition-timing-function: linear;
+  opacity: 1;
+  top: 50%;
 }
 .navBarIcon:hover {
   cursor: pointer;
@@ -97,8 +140,105 @@ a {
   cursor: pointer;
 }
 
-/* Set Up Grid System */
+/* Grid design */
+.containerGrid {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, 1));
+  grid-template-columns: repeat(12, 1fr);
+  -webkit-box-shadow: 0px 0px 43px -1px rgba(0,0,0,0.46);
+  -moz-box-shadow: 0px 0px 43px -1px rgba(0,0,0,0.46);
+  box-shadow: 0px 0px 43px -1px rgba(0,0,0,0.46);
+  /* grid-template-rows: 30% 10% 60%;
+  grid-row-gap: 4px;
+  grid-column-gap: 4px;  */
+}
 
+
+.gridHeader {
+  grid-column: span 12;
+  justify-self: center;
+  align-self: end;
+  color: black;
+  height: auto;
+}
+
+.gridItemHead {
+  grid-column: span 4;
+  justify-self: center;
+  align-self: start;
+  color: #A7915F;
+  font-weight: 700;
+  text-align: center;
+}
+
+.gridItemContent {
+  width: 80%;
+  margin: auto;
+  margin-top: 8px;
+  grid-column: span 4;
+  justify-self: start;
+  align-self: start;
+  color: #272727;
+  text-align: center;
+}
+
+
+.projectsGrid {
+  width: 100%;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, 1));
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.projectsHeader {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  grid-column: span 12;
+  justify-self: center;
+  align-self: end;
+  font-size: 52px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 5vh;
+}
+
+.projectCard {
+  width: 100%;
+  grid-column: span 6;
+  margin: 0;
+  height: 25vh;
+}
+
+@media screen and (max-width: 1024px) {
+    .gridItemHead {
+      grid-column: span 12;
+      margin-top: 48px !important;
+    }
+
+    .gridItemContent {
+      grid-column: span 12;
+      margin-top: 32px;
+    }
+
+    .pageTitle {
+      font-size: 6rem !important;
+    }
+    .pricingTitle {
+      font-size: 2rem !important;
+    }
+    .hideOnMobile {
+      display: none;
+    }
+}
+
+
+/* Set Up Keyfram animation */
 
 @keyframes scrollDownPulse {
   0% {
