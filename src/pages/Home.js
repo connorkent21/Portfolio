@@ -14,6 +14,7 @@ import Zoom from 'react-reveal/Zoom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import Particles from 'react-particles-js';
 
 
 import '../styles/master.css'
@@ -27,7 +28,7 @@ class Home extends Component {
       displayLine: false,
       doneTyping: false,
       lineBreakWidth: '0%',
-      topHeight: '15%',
+      topHeight: '0%',
       navBarBackground: false,
     };
     this.handleScroll = this.handleScroll.bind(this);
@@ -56,47 +57,127 @@ class Home extends Component {
   render() {
     return (
       <Block>
-        <Block className='container'>
-            <Block style={{
-              transition: 'background 1s',
-              background: this.state.navBarBackground ? 'rgba(165, 160, 154, .5)' : '#64706c',
-              position: 'fixed',
-              top: 0,
-              margin: 'auto',
-              textAlign: 'center',
-              padding: '12px',
-              height: '100px',
-              boxShadow: this.state.navBarBackground ?  '' : 'inset 0 0 8px black',
-              }}
-              className='navBar'
-              >
-              <Block  style={{
-                  display: 'table-cell',
-                  verticalAlign: 'middle',
-                }}>
-                <a href='/'
-                  className='navBarTitle'
-                  style={{
-                    fontSize: this.state.navBarBackground ? '22px' : '',
-                  }}
-                  >
-                  C K
-                </a>
 
-                <a style={{
-                    marginLeft: '80%',
-                    fontSize: this.state.navBarBackground ? '20px' : '',
-                  }} href='https://www.linkedin.com/in/connorkent1/' target='_blank' className='navBarIcon'>
-                  <FontAwesomeIcon icon={faLinkedin} size='lg' />
-                </a>
-                <a style={{
-                    marginLeft: '18px',
-                    fontSize: this.state.navBarBackground ? '22px' : '',
-                  }} href='https://github.com/connorkent21' target='_blank' className='navBarIcon'>
-                  <FontAwesomeIcon icon={faGithubSquare} size='lg' />
-                </a>
-              </Block>
-            </Block>
+        <Block className='container'>
+          <Block style={{position: 'absolute'}}>
+            <Particles style={{
+                height: '100%',
+                width: '100%',
+                zIndex: '-1',
+                position: 'absolute',
+                backgroundAttachment: 'fixed',
+              }} params={{
+              "particles": {
+                "number": {
+                  "value": 111,
+                  "density": {
+                    "enable": true,
+                    "value_area": 800
+                  }
+                },
+                "color": {
+                  "value": "#ffffff"
+                },
+                "shape": {
+                  "type": "circle",
+                  "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                  },
+                  "polygon": {
+                    "nb_sides": 5
+                  },
+                  "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                  }
+                },
+                "opacity": {
+                  "value": 0.5,
+                  "random": false,
+                  "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                  }
+                },
+                "size": {
+                  "value": 3,
+                  "random": true,
+                  "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                  }
+                },
+                "line_linked": {
+                  "enable": true,
+                  "distance": 150,
+                  "color": "#ffffff",
+                  "opacity": 0.4,
+                  "width": 0.9469771699587272
+                },
+                "move": {
+                  "enable": true,
+                  "speed": 3.206824121731046,
+                  "direction": "none",
+                  "random": false,
+                  "straight": false,
+                  "out_mode": "out",
+                  "bounce": false,
+                  "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                  }
+                }
+              },
+              "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                  "onhover": {
+                    "enable": true,
+                    "mode": "bubble"
+                  },
+                  "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                  },
+                  "resize": true
+                },
+                "modes": {
+                  "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                      "opacity": 1
+                    }
+                  },
+                  "bubble": {
+                    "distance": 194.89853095232286,
+                    "size": 8.120772123013452,
+                    "duration": 3.979178340276591,
+                    "opacity": 0.20301930307533628,
+                    "speed": 3
+                  },
+                  "repulse": {
+                    "distance": 600.9371371029954,
+                    "duration": 0.4
+                  },
+                  "push": {
+                    "particles_nb": 4
+                  },
+                  "remove": {
+                    "particles_nb": 2
+                  }
+                }
+              },
+              "retina_detect": true
+            }} />
+
+          </Block>
 
           <Block style={{
               width: '80%',
@@ -104,6 +185,8 @@ class Home extends Component {
               textAlign: 'center',
               marginTop: this.state.topHeight,
               height: 'auto',
+              zIndex: '1',
+              paddingTop: '15%',
             }}
             >
 
@@ -119,7 +202,8 @@ class Home extends Component {
 
             <Block style={{
                 margin: 'auto',
-                display: this.state.topHeight == '15%' ? 'block' : 'none'
+                display: this.state.topHeight == '0%' ? 'block' : 'none',
+                paddingTop: '50px',
               }}>
               <Fade bottom big  when={this.state.doneTyping}>
                 <Block className='typedMenu'>
@@ -163,143 +247,54 @@ class Home extends Component {
 
 
           </Block>
+
+
         </Block>
-        <section className='projectsGrid'>
+
+
+        <section className='containerGrid'>
           <Block className='projectsHeader'>
-            Projects
+            PROJECTS
           </Block>
 
-          <Block className='projectCard'>
-            <Block style={{
-                margin:'auto',
-                textAlign: 'center',
-                marginTop: '25%',
-                
-              }}>
-
+          <Block className='projectCard' style={{
+              backgroundColor: 'blue',
+            }}>
+            <Block className='projectOverlay'>
+              <Block className='overlayText'>
+                This is the project overlay
+              </Block>
             </Block>
 
           </Block>
+          <Block className='projectCard' style={{
+              backgroundColor: 'red',
+            }}>
+            <Block className='projectOverlay'>
+              <Block className='overlayText'>
+                This is the project overlay
+              </Block>
+            </Block>
+          </Block>
+          <Block className='projectCard' style={{
+              backgroundColor: 'green',
+            }}>
+            <Block className='projectOverlay'>
+              <Block className='overlayText'>
+                This is the project overlay
+              </Block>
+            </Block>
+          </Block>
+          <Block className='projectCard' style={{
+              backgroundColor: 'orange',
+            }}>
+            <Block className='projectOverlay'>
+              <Block className='overlayText'>
+                This is the project overlay
+              </Block>
+            </Block>
+          </Block>
         </section>
-
-
-        <section className='containerGrid' style={{
-              padding: '20px',
-              paddingBottom: '100px',
-            }} >
-            <div className='gridHeader' style={{
-                alignItems: 'center',
-                textAlign: 'center',
-              }}>
-              <h1 color='black' style={{
-                  margin: 'auto',
-                  textAlign: 'center',
-                  marginBottom: '50px',
-                }}>
-                  About Me
-              </h1>
-            </div>
-
-
-
-              <Flex className='gridItemHead' style={{
-                  display: 'inline-block',
-                  width: '100%',
-                  fontSize: '28px',
-                  textAlign: 'center',
-                  alignItems: 'center',
-                  marginTop: '0px',
-                }}>
-                  <Block style={{
-                      height: '25%',
-                    }}>
-                    WHY LEND?
-                  </Block>
-                  <Copy color='black' medium={{
-                      'font-size' : '1.25rem'
-                    }} style={{
-                      color: 'black',
-                      marginTop: '16px',
-                      textAlign: 'center',
-                      margin: 'auto',
-                      fontWeight: 500,
-                      width: '80%'
-                    }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. A lacus vestibulum sed arcu non odio euismod. In vitae
-                    turpis massa sed elementum tempus egestas sed sed. Aliquet
-                    porttitor lacus luctus accumsan tortor posuere ac ut.
-                  </Copy>
-              </Flex>
-
-
-
-              <Flex className='gridItemHead' style={{
-                  display: 'inline-block',
-                  width: '100%',
-                  fontSize: '28px',
-                  textAlign: 'center',
-                  alignItems: 'center',
-                  marginTop: '0px',
-                }}>
-                  <Block style={{
-                      height: '25%',
-                    }}>
-                    YOU'RE IN CONTROL
-                  </Block>
-                  <Copy color='black' medium={{
-                      'font-size' : '1.25rem'
-                    }} style={{
-                      color: 'black',
-                      marginTop: '16px',
-                      textAlign: 'center',
-                      margin: 'auto',
-                      fontWeight: 500,
-                      width: '80%'
-                    }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. A lacus vestibulum sed arcu non odio euismod. In vitae
-                    turpis massa sed elementum tempus egestas sed sed. Aliquet
-                    porttitor lacus luctus accumsan tortor posuere ac ut.
-                  </Copy>
-              </Flex>
-
-
-              <Flex className='gridItemHead' style={{
-                  display: 'inline-block',
-                  width: '100%',
-                  fontSize: '28px',
-                  textAlign: 'center',
-                  alignItems: 'center',
-                  marginTop: '0px',
-                }}>
-                  <Block style={{
-                      height: '25%',
-                    }}>
-                    WE'RE THERE
-                  </Block>
-                  <Copy color='black' medium={{
-                      'font-size' : '1.25rem'
-                    }} style={{
-                      color: 'black',
-                      marginTop: '16px',
-                      textAlign: 'center',
-                      margin: 'auto',
-                      fontWeight: 500,
-                      width: '80%'
-                    }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. A lacus vestibulum sed arcu non odio euismod. In vitae
-                    turpis massa sed elementum tempus egestas sed sed. Aliquet
-                    porttitor lacus luctus accumsan tortor posuere ac ut.
-                  </Copy>
-              </Flex>
-          </section>
-
-
       </Block>
 
     );
