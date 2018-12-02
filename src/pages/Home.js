@@ -13,8 +13,8 @@ import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import Flip from 'react-reveal/Flip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons';
+import { faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Particles from 'react-particles-js';
 
 
@@ -208,8 +208,14 @@ class Home extends Component {
                 paddingTop: '50px',
               }}>
               <Fade bottom big  when={this.state.doneTyping}>
-                <Block className='typedMenu'>
-                  About Me
+                <Block className='typedMenu' onClick={() => {
+                    const projects = document.getElementsByClassName('projectsGrid')[0];
+                    projects.scrollIntoView({
+                      block: 'start',
+                      behavior: 'smooth',
+                    });
+                  }}>
+                  Projects
                 </Block>
               </Fade>
               <Fade bottom big when={this.state.doneTyping} delay={500}>
@@ -220,7 +226,7 @@ class Home extends Component {
 
               <Fade bottom big when={this.state.doneTyping} delay={1000}>
                 <Block className='typedMenu'>
-                  Projects
+                  About Me
                 </Block>
               </Fade>
 
@@ -236,14 +242,20 @@ class Home extends Component {
             <Block style={{
                 margin: 'auto',
                 marginTop: '75px',
-                width: '50px',
-                height: '75px',
+                width: '75px',
+                height: '120px',
                 alignItems: 'center',
                 textAlign: 'center',
                 color: '#f6f1ed',
-              }}>
+              }} className='pointer' onClick={() => {
+                  const projects = document.getElementsByClassName('projectsGrid')[0];
+                  projects.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth',
+                  });
+                }}>
               <Fade big delay={2500}>
-                <FontAwesomeIcon icon={faChevronDown} size='lg' className='scrollArrow' />
+                <FontAwesomeIcon icon={faChevronDown} size='lg' className='scrollArrow'/>
               </Fade>
             </Block>
 
@@ -269,6 +281,7 @@ class Home extends Component {
               height: '12px',
               width: '100%',
               backgroundColor: 'white',
+              boxShadow: 'inset 0 12px 12px -12px rgba(0, 0, 0, 0.5)',
             }}>
 
           </Block>
@@ -305,6 +318,10 @@ class Home extends Component {
             </Block>
           </Block>
 
+
+
+
+
           <Block className='projectCard' style={{
             }}>
             <Block className='projectsGrid'>
@@ -314,7 +331,7 @@ class Home extends Component {
                   }}>
                     <Fade>
                       <Block>
-                        DOZR Web/DOZR
+                        DOZR Web/DOZR Native
                         <Block style={{
                             backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))',
                             height: '1px',
@@ -365,17 +382,23 @@ class Home extends Component {
                         margin: 'auto',
                         marginBottom: '12px',
                         marginTop: '10%',
-                        background: 'url("https://i.imgur.com/GsXG51J.png") no-repeat',
-                        backgroundSize: '80% auto',
+                        background: 'url("https://i.imgur.com/0gwUJaA.png") no-repeat',
+                        backgroundSize: '100% auto',
                         backgroundPosition: 'center',
                         backgroundColor: '#191919',
+                        boxShadow: '5px 8px 32px -4px rgba(0,0,0,0.67)',
+
                       }}
                     >
-                    <Block className='projectOverlay'>
+                    <Block className='projectOverlay' onClick={() => window.open('https://dozr.com/earnings')}>
                       <Block className='overlayText' style={{
                           verticalAlign: 'middle',
                         }}>
-                        Check it out!
+                        <span className='overlayLinkDozr' onClick={() => window.open('https://dozr.com/earnings')}>
+                          Check it out! <FontAwesomeIcon icon={faChevronRight} size='lg' style={{
+                            paddingLeft: '8px',
+                          }}/>
+                        </span>
                       </Block>
                     </Block>
                     </Block>
@@ -385,17 +408,24 @@ class Home extends Component {
                       width: '100%',
                       margin: 'auto',
                       marginBottom: '12px',
-                      background: 'url("https://i.imgur.com/GsXG51J.png") no-repeat',
-                      backgroundSize: '80% auto',
+                      background: 'url("https://i.imgur.com/TSxSEDg.png") no-repeat',
+                      backgroundSize: '100% auto',
                       backgroundPosition: 'center',
                       backgroundColor: '#191919',
+                      boxShadow: '5px 8px 32px -4px rgba(0,0,0,0.67)',
+
                     }}
                     >
-                    <Block className='projectOverlay'>
+                    <Block className='projectOverlay' onClick={() => window.open('https://dozr.com/login')}>
                       <Block className='overlayText' style={{
                           verticalAlign: 'middle',
                         }}>
-                        Check it out!
+                        <span className='overlayLinkDozr'>
+                          Check it out! <FontAwesomeIcon icon={faChevronRight} size='lg' style={{
+                            paddingLeft: '8px',
+                          }}/>
+                        </span>
+
                       </Block>
                     </Block>
 
@@ -409,10 +439,134 @@ class Home extends Component {
 
             </Block>
           </Block>
+
+
+
           <Block className='projectCard' style={{
             }}>
-            Made a Dozzzzzz
+            <Block className='projectsGrid'>
+
+                <Block className='projectsHeader underline' style={{
+                    fontSize: '36px',
+                  }}>
+                    <Fade>
+                      <Block>
+                        DOZR Web/DOZR Native
+                        <Block style={{
+                            backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))',
+                            height: '1px',
+                            width: '75%',
+                            margin: 'auto',
+                            gridColumn: 'span 12',
+                          }}></Block>
+                      </Block>
+                    </Fade>
+
+
+
+              </Block>
+
+
+                <Block className='projectCard copy' style={{
+                    width: '80%',
+                    margin: 'auto',
+                    boxSizing: 'border-box',
+                    display: 'table'
+                  }}>
+                  <Fade left className='span-6'>
+                    <span style={{
+                        display: 'table-cell',
+                        verticalAlign: 'middle',
+                      }}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                      volutpat, nibh eu egestas fermentum, lectus mauris feugiat est,
+                      sodales semper nisi risus non ipsum. Nullam eget dolor sit amet
+                      arcu ullamcorper gravida ut a ex. Vivamus eu tincidunt massa,
+                      in luctus erat. Sed ut elit eu nisl varius varius. Ut vitae
+                      finibus purus. In justo justo, scelerisque nec odio eget,
+                      hendrerit semper turpis. Pellentesque habitant morbi tristique.
+                    </span>
+                  </Fade>
+                </Block>
+
+
+                <Block className='projectCard' style={{
+                  boxSizing: 'border-box',
+                  width: '80%',
+                  margin: 'auto',
+                  padding: '0 0 20% 0',
+                  }}>
+                    <Block className='span-12' style={{
+                        height: '50%',
+                        width: '100%',
+                        margin: 'auto',
+                        marginBottom: '12px',
+                        marginTop: '10%',
+                        background: 'url("https://i.imgur.com/0gwUJaA.png") no-repeat',
+                        backgroundSize: '100% auto',
+                        backgroundPosition: 'center',
+                        backgroundColor: '#191919',
+                        boxShadow: '5px 8px 32px -4px rgba(0,0,0,0.67)',
+
+                      }}
+                    >
+                    <Block className='projectOverlay overlayLinkDozr' onClick={() => window.open('https://dozr.com/earnings')}>
+                      <Block className='overlayText' style={{
+                          verticalAlign: 'middle',
+                        }}>
+                        <span className='overlayLinkDozr'>
+                          Check it out! <FontAwesomeIcon icon={faChevronRight} size='lg' style={{
+                            paddingLeft: '8px',
+                          }}/>
+                        </span>
+                      </Block>
+                    </Block>
+                    </Block>
+
+                    <Block className='span-12' style={{
+                      height: '50%',
+                      width: '100%',
+                      margin: 'auto',
+                      marginBottom: '12px',
+                      background: 'url("https://i.imgur.com/TSxSEDg.png") no-repeat',
+                      backgroundSize: '100% auto',
+                      backgroundPosition: 'center',
+                      backgroundColor: '#191919',
+                      boxShadow: '5px 8px 32px -4px rgba(0,0,0,0.67)',
+
+                    }}
+                    >
+                    <Block className='projectOverlay overlayLinkDozr' onClick={() => window.open('https://dozr.com/login')}>
+                      <Block className='overlayText' style={{
+                          verticalAlign: 'middle',
+                        }}>
+                        <span className='overlayLinkDozr'>
+                          Check it out! <FontAwesomeIcon icon={faChevronRight} size='lg' style={{
+                            paddingLeft: '8px',
+                          }}/>
+                        </span>
+
+                      </Block>
+                    </Block>
+
+                    </Block>
+
+
+
+                </Block>
+
+
+
+            </Block>
           </Block>
+
+
+
+
+
+
+
+
           <Block className='projectCard' style={{
               background: 'url("https://i.imgur.com/GsXG51J.png") no-repeat',
               backgroundSize: '80% auto',
