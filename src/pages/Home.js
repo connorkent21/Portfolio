@@ -252,49 +252,150 @@ class Home extends Component {
         </Block>
 
 
-        <section className='containerGrid'>
+        <section className='projectsGrid'>
           <Block className='projectsHeader'>
             PROJECTS
           </Block>
+          <Block className='banner' />
 
           <Block className='projectCard' style={{
-              backgroundColor: 'blue',
-            }}>
-            <Block className='projectOverlay'>
-              <Block className='overlayText'>
-                This is the project overlay
-              </Block>
-            </Block>
+              background: 'url("https://i.imgur.com/GsXG51J.png") no-repeat',
+              backgroundSize: '80% auto',
+              backgroundPosition: 'center',
+              backgroundColor: '#191919',
 
-          </Block>
-          <Block className='projectCard' style={{
-              backgroundColor: 'red',
             }}>
             <Block className='projectOverlay'>
-              <Block className='overlayText'>
-                This is the project overlay
+              <Block className='overlayText dozrOverlay'>
+                <Block className='toolsUsedHeader'>
+                  Built with...
+                </Block>
+                <img src='https://i.imgur.com/qLgizjN.png' style={{
+                    maxWidth: '50%',
+                    maxHeight: '35%',
+                    margin: 'auto',
+                    display: 'inline',
+                    padding: '8px',
+                    marginTop: '5%',
+                  }} />
+                  <img src='https://i.imgur.com/9bRalzr.png' style={{
+                      maxWidth: '50%',
+                      maxHeight: '35%',
+                      margin: 'auto',
+                      display: 'inline',
+                      padding: '8px',
+                      marginTop: '5%',
+                    }} />
               </Block>
             </Block>
           </Block>
+
           <Block className='projectCard' style={{
-              backgroundColor: 'green',
             }}>
-            <Block className='projectOverlay'>
-              <Block className='overlayText'>
-                This is the project overlay
+            <Block className='projectsGrid'>
+
+                <Block className='projectsHeader underline' style={{
+                    fontSize: '36px',
+                  }}>
+                    <Fade top>
+                      DOZR Web/DOZR
+                    </Fade>
+
               </Block>
+
+
+                <Block className='projectCard copy' style={{
+                    width: '80%',
+                    margin: 'auto',
+                    boxSizing: 'border-box',
+                  }}>
+                  <Fade left className='span-6'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                    volutpat, nibh eu egestas fermentum, lectus mauris feugiat est,
+                    sodales semper nisi risus non ipsum. Nullam eget dolor sit amet
+                    arcu ullamcorper gravida ut a ex. Vivamus eu tincidunt massa,
+                    in luctus erat. Sed ut elit eu nisl varius varius. Ut vitae
+                    finibus purus. In justo justo, scelerisque nec odio eget,
+                    hendrerit semper turpis. Pellentesque habitant morbi tristique.
+                  </Fade>
+                </Block>
+
+
+                <Block className='projectCard' style={{
+                  boxSizing: 'border-box',
+                  width: '80%',
+                  margin: 'auto',
+                  padding: '0 0 20% 0',
+                  }}>
+                    <Block className='span-12' style={{
+                        height: '50%',
+                        width: '80%',
+                        margin: 'auto',
+                        marginBottom: '12px',
+                        backgroundColor: 'green',
+                      }}
+                    >
+                    </Block>
+                    <Block className='span-12' style={{
+                      height: '50%',
+                      width: '80%',
+                      margin: 'auto',
+                      marginBottom: '12px',
+                      backgroundColor: 'blue',
+                    }}
+                    >
+                    </Block>
+
+
+                </Block>
+
+
+
             </Block>
           </Block>
           <Block className='projectCard' style={{
-              backgroundColor: 'orange',
+            }}>
+            Made a Dozzzzzz
+          </Block>
+          <Block className='projectCard' style={{
+              background: 'url("https://i.imgur.com/GsXG51J.png") no-repeat',
+              backgroundSize: '80% auto',
+              backgroundPosition: 'center',
+              backgroundColor: '#191919',
+
             }}>
             <Block className='projectOverlay'>
-              <Block className='overlayText'>
-                This is the project overlay
+              <Block className='overlayText dozrOverlay'>
+                <Block className='toolsUsedHeader'>
+                  Built with...
+                </Block>
+                <img src='https://i.imgur.com/qLgizjN.png' style={{
+                    maxWidth: '50%',
+                    maxHeight: '35%',
+                    margin: 'auto',
+                    display: 'inline',
+                    padding: '8px',
+                    marginTop: '5%',
+                  }} />
+                  <img src='https://i.imgur.com/9bRalzr.png' style={{
+                      maxWidth: '50%',
+                      maxHeight: '35%',
+                      margin: 'auto',
+                      display: 'inline',
+                      padding: '8px',
+                      marginTop: '5%',
+                    }} />
               </Block>
             </Block>
           </Block>
         </section>
+        <Block style={{
+            height: '500px',
+            width: '100%',
+            backgroundColor: 'transparent',
+          }}>
+
+        </Block>
       </Block>
 
     );
