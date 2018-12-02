@@ -11,6 +11,7 @@ import {withStyles} from '@material-ui/core/styles';
 import { Block, Flex, Copy, Shadow } from '../components/Base';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
+import Flip from 'react-reveal/Flip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -27,7 +28,7 @@ class Home extends Component {
     this.state = {
       displayLine: false,
       doneTyping: false,
-      lineBreakWidth: '0%',
+      lineBreakWidth: 0,
       topHeight: '0%',
       navBarBackground: false,
     };
@@ -66,6 +67,7 @@ class Home extends Component {
                 zIndex: '-1',
                 position: 'absolute',
                 backgroundAttachment: 'fixed',
+                boxSizing: 'border-box !important',
               }} params={{
               "particles": {
                 "number": {
@@ -190,14 +192,14 @@ class Home extends Component {
             }}
             >
 
-              <Zoom duration={3000} onReveal={() => {
+              <Zoom duration={2500} onReveal={() => {
                   this.setState({doneTyping: true})
                 }}>
                 <span className='typedTitle' style={{margin: 'auto', textAlign: 'center'}}>
                   CONNOR KENT
                 </span>
               </Zoom>
-              <Block className='lineBreak' style={{width: this.state.lineBreakWidth}}></Block>
+              <Block className={this.state.lineBreakWidth ? 'lineBreak length' : 'lineBreak noLength'}></Block>
 
 
             <Block style={{
@@ -223,7 +225,7 @@ class Home extends Component {
               </Fade>
 
               <Fade bottom big when={this.state.doneTyping} delay={1500} onReveal={() => {
-                  this.setState({lineBreakWidth: '50%'});
+                  this.setState({lineBreakWidth: '30%'});
                 }}>
                 <Block className='typedMenu'>
                   Contact
@@ -256,7 +258,20 @@ class Home extends Component {
           <Block className='projectsHeader'>
             PROJECTS
           </Block>
-          <Block className='banner' />
+          <Block className='span-12' style={{
+              height: '12px',
+              width: '100%',
+              backgroundColor: 'black',
+            }}>
+
+          </Block>
+          <Block className='span-12' style={{
+              height: '12px',
+              width: '100%',
+              backgroundColor: 'white',
+            }}>
+
+          </Block>
 
           <Block className='projectCard' style={{
               background: 'url("https://i.imgur.com/GsXG51J.png") no-repeat',
@@ -297,9 +312,20 @@ class Home extends Component {
                 <Block className='projectsHeader underline' style={{
                     fontSize: '36px',
                   }}>
-                    <Fade top>
-                      DOZR Web/DOZR
+                    <Fade>
+                      <Block>
+                        DOZR Web/DOZR
+                        <Block style={{
+                            backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))',
+                            height: '1px',
+                            width: '75%',
+                            margin: 'auto',
+                            gridColumn: 'span 12',
+                          }}></Block>
+                      </Block>
                     </Fade>
+
+
 
               </Block>
 
@@ -308,15 +334,21 @@ class Home extends Component {
                     width: '80%',
                     margin: 'auto',
                     boxSizing: 'border-box',
+                    display: 'table'
                   }}>
                   <Fade left className='span-6'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                    volutpat, nibh eu egestas fermentum, lectus mauris feugiat est,
-                    sodales semper nisi risus non ipsum. Nullam eget dolor sit amet
-                    arcu ullamcorper gravida ut a ex. Vivamus eu tincidunt massa,
-                    in luctus erat. Sed ut elit eu nisl varius varius. Ut vitae
-                    finibus purus. In justo justo, scelerisque nec odio eget,
-                    hendrerit semper turpis. Pellentesque habitant morbi tristique.
+                    <span style={{
+                        display: 'table-cell',
+                        verticalAlign: 'middle',
+                      }}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                      volutpat, nibh eu egestas fermentum, lectus mauris feugiat est,
+                      sodales semper nisi risus non ipsum. Nullam eget dolor sit amet
+                      arcu ullamcorper gravida ut a ex. Vivamus eu tincidunt massa,
+                      in luctus erat. Sed ut elit eu nisl varius varius. Ut vitae
+                      finibus purus. In justo justo, scelerisque nec odio eget,
+                      hendrerit semper turpis. Pellentesque habitant morbi tristique.
+                    </span>
                   </Fade>
                 </Block>
 
@@ -329,22 +361,46 @@ class Home extends Component {
                   }}>
                     <Block className='span-12' style={{
                         height: '50%',
-                        width: '80%',
+                        width: '100%',
                         margin: 'auto',
                         marginBottom: '12px',
-                        backgroundColor: 'green',
+                        marginTop: '10%',
+                        background: 'url("https://i.imgur.com/GsXG51J.png") no-repeat',
+                        backgroundSize: '80% auto',
+                        backgroundPosition: 'center',
+                        backgroundColor: '#191919',
                       }}
                     >
+                    <Block className='projectOverlay'>
+                      <Block className='overlayText' style={{
+                          verticalAlign: 'middle',
+                        }}>
+                        Check it out!
+                      </Block>
                     </Block>
+                    </Block>
+
                     <Block className='span-12' style={{
                       height: '50%',
-                      width: '80%',
+                      width: '100%',
                       margin: 'auto',
                       marginBottom: '12px',
-                      backgroundColor: 'blue',
+                      background: 'url("https://i.imgur.com/GsXG51J.png") no-repeat',
+                      backgroundSize: '80% auto',
+                      backgroundPosition: 'center',
+                      backgroundColor: '#191919',
                     }}
                     >
+                    <Block className='projectOverlay'>
+                      <Block className='overlayText' style={{
+                          verticalAlign: 'middle',
+                        }}>
+                        Check it out!
+                      </Block>
                     </Block>
+
+                    </Block>
+
 
 
                 </Block>
