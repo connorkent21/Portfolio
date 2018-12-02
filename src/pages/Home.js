@@ -16,6 +16,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons';
 import { faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Particles from 'react-particles-js';
+import PdfModal from '../components/PdfModal';
 
 
 import '../styles/master.css'
@@ -31,6 +32,7 @@ class Home extends Component {
       lineBreakWidth: 0,
       topHeight: '0%',
       navBarBackground: false,
+      showPDF: false,
     };
     this.handleScroll = this.handleScroll.bind(this);
 
@@ -180,7 +182,12 @@ class Home extends Component {
             }} />
 
           </Block>
-
+          <PdfModal
+            showModal={this.state.showPDF}
+            exitModal={() => {
+              this.setState({showPDF: false});
+            }}
+          />
           <Block style={{
               width: '80%',
               margin: 'auto',
@@ -219,7 +226,9 @@ class Home extends Component {
                 </Block>
               </Fade>
               <Fade bottom big when={this.state.doneTyping} delay={500}>
-                <Block className='typedMenu'>
+                <Block className='typedMenu' onClick={() => {
+                    this.setState({showPDF: true});
+                  }}>
                   Resume
                 </Block>
               </Fade>
