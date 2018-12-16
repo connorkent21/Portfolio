@@ -55,27 +55,32 @@ function NavBar(props) {
   return (
     <MuiThemeProvider theme={theme}>
       <div className={classes.root}>
-        <AppBar position="fixed" className={props.onTop ? classes.appBar : [classes.appBar, classes.transparentBar]}>
+        <AppBar position="fixed" className={props.onTop ? classes.appBar : `${classes.appBar} ${classes.transparentBar}`}>
           <Toolbar>
             <Typography variant="h6" color={props.onTop ? 'primary' : "inherit"} className={classes.grow}>
               C K
             </Typography>
-            <Typography color={props.onTop ? 'primary' : "inherit"} className='navBarButton'>
+            <Typography color={props.onTop ? 'primary' : "inherit"} >
               <FontAwesomeIcon
                 icon={faLinkedin}
-                size='2x'
-                className='navBarButton'
+                size='3x'
+                className={`navBarButton ${props.onTop ? 'glowTop' : 'glow'}`}
                 onClick={() => {
                   window.open('https://www.linkedin.com/in/connorkent1/');
                 }}
               />
           </Typography>
+          <div style={{
+              width: '20px',
+              background: 'transparent',
+            }}
+          />
 
-          <Typography color={props.onTop ? 'primary' : "inherit"} className='navBarButton'>
+          <Typography color={props.onTop ? 'primary' : "inherit"} >
             <FontAwesomeIcon
               icon={faGithubSquare}
-              size='2x'
-              className='navBarButton'
+              size='3x'
+              className={`navBarButton ${props.onTop ? 'glowTop' : 'glow'}`}
               onClick={() => {
                 window.open('https://github.com/connorkent21');
               }}

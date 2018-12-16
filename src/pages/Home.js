@@ -18,6 +18,8 @@ import { faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import Particles from 'react-particles-js';
 import PdfModal from '../components/PdfModal';
 import NavBar from '../components/navBar';
+import Carousel from 'nuka-carousel';
+import About from '../components/About';
 
 
 import '../styles/master.css'
@@ -74,14 +76,14 @@ class Home extends Component {
               }} params={{
                 "particles": {
                      "number": {
-                       "value": 223,
+                       "value": 300,
                        "density": {
                          "enable": true,
                          "value_area": 5839.692548078818
                        }
                      },
                      "color": {
-                       "value": "#ffffff"
+                       "value": ["#ffffff",'#915e5e',"#282525","#b56317", '#c3bebb']
                      },
                      "shape": {
                        "type": "circle",
@@ -279,14 +281,14 @@ class Home extends Component {
           <Block className='projectsHeader'>
             PROJECTS
           </Block>
-          <Block className='span-12' style={{
+          <Block className='span-12' id='lineBreakProjects' style={{
               height: '12px',
               width: '100%',
               backgroundColor: 'black',
             }}>
 
           </Block>
-          <Block className='span-12' style={{
+          <Block className='span-12' id='projectsShadow' style={{
               height: '12px',
               width: '100%',
               backgroundColor: 'white',
@@ -609,11 +611,132 @@ class Home extends Component {
           </Block>
         </section>
         <Block style={{
-            height: '500px',
+            height: 0,
             width: '100%',
-            backgroundColor: 'transparent',
           }}>
-
+          <Particles style={{
+              height: '100%',
+              width: '100%',
+              zIndex: '-1',
+              position: 'absolute',
+              backgroundAttachment: 'fixed',
+              boxSizing: 'border-box !important',
+            }} params={{
+              "particles": {
+                   "number": {
+                     "value": 300,
+                     "density": {
+                       "enable": true,
+                       "value_area": 5839.692548078818
+                     }
+                   },
+                   "color": {
+                     "value": ["#ffffff",'#915e5e',"#282525","#b56317", '#c3bebb']
+                   },
+                   "shape": {
+                     "type": "circle",
+                     "stroke": {
+                       "width": 5,
+                       "color": "#000000"
+                     },
+                     "polygon": {
+                       "nb_sides": 5
+                     },
+                     "image": {
+                       "src": "img/github.svg",
+                       "width": 100,
+                       "height": 100
+                     }
+                   },
+                   "opacity": {
+                     "value": 0.44093831673801875,
+                     "random": true,
+                     "anim": {
+                       "enable": false,
+                       "speed": 1,
+                       "opacity_min": 0.1,
+                       "sync": false
+                     }
+                   },
+                   "size": {
+                     "value": 4.008530152163807,
+                     "random": true,
+                     "anim": {
+                       "enable": false,
+                       "speed": 40,
+                       "size_min": 0.1,
+                       "sync": false
+                     }
+                   },
+                   "line_linked": {
+                     "enable": false,
+                     "distance": 150,
+                     "color": "#ffffff",
+                     "opacity": 0.4,
+                     "width": 1
+                   },
+                   "move": {
+                     "enable": true,
+                     "speed": 4,
+                     "direction": "bottom-left",
+                     "random": true,
+                     "straight": false,
+                     "out_mode": "out",
+                     "bounce": false,
+                     "attract": {
+                       "enable": false,
+                       "rotateX": 600,
+                       "rotateY": 1200
+                     }
+                   }
+                 },
+                 "interactivity": {
+                   "detect_on": "canvas",
+                   "events": {
+                     "onhover": {
+                       "enable": true,
+                       "mode": "repulse"
+                     },
+                     "onclick": {
+                       "enable": true,
+                       "mode": "push"
+                     },
+                     "resize": true
+                   },
+                   "modes": {
+                     "grab": {
+                       "distance": 400,
+                       "line_linked": {
+                         "opacity": 1
+                       }
+                     },
+                     "bubble": {
+                       "distance": 400,
+                       "size": 40,
+                       "duration": 2,
+                       "opacity": 8,
+                       "speed": 3
+                     },
+                     "repulse": {
+                       "distance": 200,
+                       "duration": 0.4
+                     },
+                     "push": {
+                       "particles_nb": 4
+                     },
+                     "remove": {
+                       "particles_nb": 2
+                     }
+                   }
+                 },
+                 "retina_detect": true
+          }} />
+        <Block style={{
+            display: 'inline-block',
+          }}
+        >
+          <About />
+        </Block>
         </Block>
       </Block>
 

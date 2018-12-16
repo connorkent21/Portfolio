@@ -517,8 +517,9 @@ a {
 }
 
 .navBarButton {
-  transition: all .175s;
-  margin: auto 8px;
+  transition: transform .175s;
+  border-radius: 20px;
+  padding: 7px;
 }
 
 .navBarButton:hover {
@@ -526,7 +527,17 @@ a {
   transform: scale(1.05);
 }
 
+.glowTop:hover {
+  animation: glowTop 1s infinite alternate;
+  animation-timing-function: ease-in-out;
 
+}
+
+.glow:hover {
+  animation: glow 1s infinite alternate;
+  animation-timing-function: ease-in-out;
+
+}
 
 /* Mobile Scaling */
 @media screen and (max-width: 1024px) {
@@ -641,5 +652,23 @@ a {
   }
   100% {
     background: #b5a397;
+  }
+}
+
+@keyframes glowTop {
+  from {
+    box-shadow: 0 0 6px -6px #f6f1ed;
+  }
+  to {
+    box-shadow: 0 0 6px 6px #f6f1ed;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 6px -6px black;
+  }
+  to {
+    box-shadow: 0 0 6px 6px block;
   }
 }
