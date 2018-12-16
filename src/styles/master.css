@@ -102,8 +102,8 @@ a {
   background-image: linear-gradient(to left,
     transparent,
     transparent 50%,
-    white 50%,
-    white);
+    #f6f1ed 50%,
+    #f6f1ed);
   background-position: 100% 0;
   background-size: 200% 100%;
   transition: all .25s ease-in;
@@ -510,11 +510,23 @@ a {
 }
 
 .modalButton:hover {
+  cursor: pointer;
   transform: scale(1.05);
   box-shadow: 5px 8px 32px -4px rgba(0,0,0,0.67);
   -webkit-box-shadow: 5px 8px 32px -4px rgba(0,0,0,0.67);
   -moz-box-shadow: 5px 8px 32px -4px rgba(0,0,0,0.67);
 }
+
+.navBarButton {
+  transition: all .175s;
+  margin: auto 8px;
+}
+
+.navBarButton:hover {
+  cursor: pointer !important;
+  transform: scale(1.05);
+}
+
 
 
 /* Mobile Scaling */

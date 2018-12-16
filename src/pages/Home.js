@@ -17,6 +17,7 @@ import { faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons';
 import { faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Particles from 'react-particles-js';
 import PdfModal from '../components/PdfModal';
+import NavBar from '../components/navBar';
 
 
 import '../styles/master.css'
@@ -31,7 +32,7 @@ class Home extends Component {
       doneTyping: false,
       lineBreakWidth: 0,
       topHeight: '0%',
-      navBarBackground: false,
+      atTop: true,
       showPDF: false,
     };
     this.handleScroll = this.handleScroll.bind(this);
@@ -45,9 +46,9 @@ class Home extends Component {
   handleScroll() {
     let scrollHeight = window.pageYOffset;
     if (scrollHeight > 10) {
-      this.setState({navBarBackground: true})
-    } else if (scrollHeight < 10 && this.state.navBarBackground) {
-      this.setState({navBarBackground: false});
+      this.setState({atTop: false})
+    } else if (scrollHeight < 10 && !this.state.atTop) {
+      this.setState({atTop: true});
     }
 
   }
@@ -60,7 +61,7 @@ class Home extends Component {
   render() {
     return (
       <Block>
-
+        <NavBar onTop={this.state.atTop}/>
         <Block className='container'>
           <Block style={{position: 'absolute'}}>
             <Particles style={{
@@ -71,116 +72,115 @@ class Home extends Component {
                 backgroundAttachment: 'fixed',
                 boxSizing: 'border-box !important',
               }} params={{
-              "particles": {
-                "number": {
-                  "value": 111,
-                  "density": {
-                    "enable": true,
-                    "value_area": 800
-                  }
-                },
-                "color": {
-                  "value": "#ffffff"
-                },
-                "shape": {
-                  "type": "circle",
-                  "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                  },
-                  "polygon": {
-                    "nb_sides": 5
-                  },
-                  "image": {
-                    "src": "img/github.svg",
-                    "width": 100,
-                    "height": 100
-                  }
-                },
-                "opacity": {
-                  "value": 0.5,
-                  "random": false,
-                  "anim": {
-                    "enable": false,
-                    "speed": 1,
-                    "opacity_min": 0.1,
-                    "sync": false
-                  }
-                },
-                "size": {
-                  "value": 3,
-                  "random": true,
-                  "anim": {
-                    "enable": false,
-                    "speed": 40,
-                    "size_min": 0.1,
-                    "sync": false
-                  }
-                },
-                "line_linked": {
-                  "enable": true,
-                  "distance": 150,
-                  "color": "#ffffff",
-                  "opacity": 0.4,
-                  "width": 0.9469771699587272
-                },
-                "move": {
-                  "enable": true,
-                  "speed": 3.206824121731046,
-                  "direction": "none",
-                  "random": false,
-                  "straight": false,
-                  "out_mode": "out",
-                  "bounce": false,
-                  "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 1200
-                  }
-                }
-              },
-              "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                  "onhover": {
-                    "enable": true,
-                    "mode": "bubble"
-                  },
-                  "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                  },
-                  "resize": true
-                },
-                "modes": {
-                  "grab": {
-                    "distance": 400,
-                    "line_linked": {
-                      "opacity": 1
-                    }
-                  },
-                  "bubble": {
-                    "distance": 194.89853095232286,
-                    "size": 8.120772123013452,
-                    "duration": 3.979178340276591,
-                    "opacity": 0.20301930307533628,
-                    "speed": 3
-                  },
-                  "repulse": {
-                    "distance": 600.9371371029954,
-                    "duration": 0.4
-                  },
-                  "push": {
-                    "particles_nb": 4
-                  },
-                  "remove": {
-                    "particles_nb": 2
-                  }
-                }
-              },
-              "retina_detect": true
+                "particles": {
+                     "number": {
+                       "value": 223,
+                       "density": {
+                         "enable": true,
+                         "value_area": 5839.692548078818
+                       }
+                     },
+                     "color": {
+                       "value": "#ffffff"
+                     },
+                     "shape": {
+                       "type": "circle",
+                       "stroke": {
+                         "width": 5,
+                         "color": "#000000"
+                       },
+                       "polygon": {
+                         "nb_sides": 5
+                       },
+                       "image": {
+                         "src": "img/github.svg",
+                         "width": 100,
+                         "height": 100
+                       }
+                     },
+                     "opacity": {
+                       "value": 0.44093831673801875,
+                       "random": true,
+                       "anim": {
+                         "enable": false,
+                         "speed": 1,
+                         "opacity_min": 0.1,
+                         "sync": false
+                       }
+                     },
+                     "size": {
+                       "value": 4.008530152163807,
+                       "random": true,
+                       "anim": {
+                         "enable": false,
+                         "speed": 40,
+                         "size_min": 0.1,
+                         "sync": false
+                       }
+                     },
+                     "line_linked": {
+                       "enable": false,
+                       "distance": 150,
+                       "color": "#ffffff",
+                       "opacity": 0.4,
+                       "width": 1
+                     },
+                     "move": {
+                       "enable": true,
+                       "speed": 4,
+                       "direction": "top-right",
+                       "random": true,
+                       "straight": false,
+                       "out_mode": "out",
+                       "bounce": false,
+                       "attract": {
+                         "enable": false,
+                         "rotateX": 600,
+                         "rotateY": 1200
+                       }
+                     }
+                   },
+                   "interactivity": {
+                     "detect_on": "canvas",
+                     "events": {
+                       "onhover": {
+                         "enable": true,
+                         "mode": "repulse"
+                       },
+                       "onclick": {
+                         "enable": true,
+                         "mode": "push"
+                       },
+                       "resize": true
+                     },
+                     "modes": {
+                       "grab": {
+                         "distance": 400,
+                         "line_linked": {
+                           "opacity": 1
+                         }
+                       },
+                       "bubble": {
+                         "distance": 400,
+                         "size": 40,
+                         "duration": 2,
+                         "opacity": 8,
+                         "speed": 3
+                       },
+                       "repulse": {
+                         "distance": 200,
+                         "duration": 0.4
+                       },
+                       "push": {
+                         "particles_nb": 4
+                       },
+                       "remove": {
+                         "particles_nb": 2
+                       }
+                     }
+                   },
+                   "retina_detect": true
             }} />
-
           </Block>
           <PdfModal
             showModal={this.state.showPDF}
