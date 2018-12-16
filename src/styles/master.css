@@ -359,6 +359,8 @@ a {
   display: inline-block;
 }
 
+
+
 /* Modal Design */
 @media only screen and (max-width: 600px) {
     .modal-contact{
@@ -482,6 +484,7 @@ a {
 .modal.infoModal > div > button:hover {
   background: #181818;
 }
+
 .infoModal {
   background-color: white;
   width: fit-content;
