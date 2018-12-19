@@ -13,11 +13,8 @@ import Fade from 'react-reveal/Fade';
 
 const styles = {
   main: {
-    width: '70vw',
     height: '50vh',
-    margin: 'auto',
-    display: 'table',
-    padding: '150px',
+    margin: '50px auto',
   },
   paper: {
     padding: '32px',
@@ -54,7 +51,7 @@ function About(props) {
   const { classes } = props;
   return (
     <MuiThemeProvider theme={theme}>
-      <main className={classes.main}>
+      <main id='about' className={`${classes.main} aboutSection`}>
         <Paper className={classes.paper}>
           <Grid container spacing={24} style={{
             display: 'inline',

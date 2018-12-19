@@ -20,6 +20,9 @@ import PdfModal from '../components/PdfModal';
 import NavBar from '../components/navBar';
 import Carousel from 'nuka-carousel';
 import About from '../components/About';
+import ParticlesTop from '../components/ParticlesTop';
+import ParticlesAbout from '../components/ParticlesAbout';
+import ContactModal from '../components/ContactModal';
 
 
 import '../styles/master.css'
@@ -36,6 +39,7 @@ class Home extends Component {
       topHeight: '0%',
       atTop: true,
       showPDF: false,
+      showContact: false,
     };
     this.handleScroll = this.handleScroll.bind(this);
 
@@ -63,126 +67,10 @@ class Home extends Component {
   render() {
     return (
       <Block>
-        <NavBar onTop={this.state.atTop}/>
         <Block className='container'>
+          <NavBar onTop={this.state.atTop}/>
           <Block style={{position: 'absolute'}}>
-            <Particles style={{
-                height: '100%',
-                width: '100%',
-                zIndex: '-1',
-                position: 'absolute',
-                backgroundAttachment: 'fixed',
-                boxSizing: 'border-box !important',
-              }} params={{
-                "particles": {
-                     "number": {
-                       "value": 300,
-                       "density": {
-                         "enable": true,
-                         "value_area": 5839.692548078818
-                       }
-                     },
-                     "color": {
-                       "value": ["#ffffff",'#915e5e',"#282525","#b56317", '#c3bebb']
-                     },
-                     "shape": {
-                       "type": "circle",
-                       "stroke": {
-                         "width": 5,
-                         "color": "#000000"
-                       },
-                       "polygon": {
-                         "nb_sides": 5
-                       },
-                       "image": {
-                         "src": "img/github.svg",
-                         "width": 100,
-                         "height": 100
-                       }
-                     },
-                     "opacity": {
-                       "value": 0.44093831673801875,
-                       "random": true,
-                       "anim": {
-                         "enable": false,
-                         "speed": 1,
-                         "opacity_min": 0.1,
-                         "sync": false
-                       }
-                     },
-                     "size": {
-                       "value": 4.008530152163807,
-                       "random": true,
-                       "anim": {
-                         "enable": false,
-                         "speed": 40,
-                         "size_min": 0.1,
-                         "sync": false
-                       }
-                     },
-                     "line_linked": {
-                       "enable": false,
-                       "distance": 150,
-                       "color": "#ffffff",
-                       "opacity": 0.4,
-                       "width": 1
-                     },
-                     "move": {
-                       "enable": true,
-                       "speed": 4,
-                       "direction": "top-right",
-                       "random": true,
-                       "straight": false,
-                       "out_mode": "out",
-                       "bounce": false,
-                       "attract": {
-                         "enable": false,
-                         "rotateX": 600,
-                         "rotateY": 1200
-                       }
-                     }
-                   },
-                   "interactivity": {
-                     "detect_on": "canvas",
-                     "events": {
-                       "onhover": {
-                         "enable": true,
-                         "mode": "repulse"
-                       },
-                       "onclick": {
-                         "enable": true,
-                         "mode": "push"
-                       },
-                       "resize": true
-                     },
-                     "modes": {
-                       "grab": {
-                         "distance": 400,
-                         "line_linked": {
-                           "opacity": 1
-                         }
-                       },
-                       "bubble": {
-                         "distance": 400,
-                         "size": 40,
-                         "duration": 2,
-                         "opacity": 8,
-                         "speed": 3
-                       },
-                       "repulse": {
-                         "distance": 200,
-                         "duration": 0.4
-                       },
-                       "push": {
-                         "particles_nb": 4
-                       },
-                       "remove": {
-                         "particles_nb": 2
-                       }
-                     }
-                   },
-                   "retina_detect": true
-            }} />
+            <ParticlesTop />
           </Block>
           <PdfModal
             showModal={this.state.showPDF}
@@ -190,6 +78,13 @@ class Home extends Component {
               this.setState({showPDF: false});
             }}
           />
+          <ContactModal
+              showModal={this.state.showContact}
+              exitModal={() => {
+                this.setState({showContact: false});
+              }}
+              display={this.state.showContact}
+            />
           <Block style={{
               width: '80%',
               margin: 'auto',
@@ -236,7 +131,13 @@ class Home extends Component {
               </Fade>
 
               <Fade bottom big when={this.state.doneTyping} delay={1000}>
-                <Block className='typedMenu'>
+                <Block className='typedMenu' onClick={() => {
+                    const about = document.getElementById('aboutSectionStart');
+                    about.scrollIntoView({
+                      block: 'start',
+                      behavior: 'smooth',
+                    });
+                  }}>
                   About Me
                 </Block>
               </Fade>
@@ -244,7 +145,9 @@ class Home extends Component {
               <Fade bottom big when={this.state.doneTyping} delay={1500} onReveal={() => {
                   this.setState({lineBreakWidth: '30%'});
                 }}>
-                <Block className='typedMenu'>
+                <Block className='typedMenu' onClick={() => {
+                    this.setState({showContact: true});
+                  }}>
                   Contact
                 </Block>
               </Fade>
@@ -252,7 +155,7 @@ class Home extends Component {
 
             <Block style={{
                 margin: 'auto',
-                marginTop: '75px',
+                marginTop: '20px',
                 width: '75px',
                 height: '120px',
                 alignItems: 'center',
@@ -387,13 +290,13 @@ class Home extends Component {
                   margin: 'auto',
                   padding: '0 0 20% 0',
                   }}>
-                    <Block className='span-12' style={{
+                    <Block className='span-12 project' style={{
                         height: '50%',
                         width: '100%',
                         margin: 'auto',
                         marginBottom: '12px',
                         marginTop: '10%',
-                        background: 'url("https://i.imgur.com/0gwUJaA.png") no-repeat',
+                        background: 'url("https://res.cloudinary.com/ckportfolio/image/upload/v1544979515/earnings.jpg") no-repeat',
                         backgroundSize: '100% auto',
                         backgroundPosition: 'center',
                         backgroundColor: '#191919',
@@ -401,11 +304,11 @@ class Home extends Component {
 
                       }}
                     >
-                    <Block className='projectOverlay' onClick={() => window.open('https://dozr.com/earnings')}>
+                    <Block className='projectOverlay' onClick={() => window.open('https://dozr.com/supplier')}>
                       <Block className='overlayText' style={{
                           verticalAlign: 'middle',
                         }}>
-                        <span className='overlayLinkDozr' onClick={() => window.open('https://dozr.com/earnings')}>
+                        <span className='overlayLinkDozr' onClick={() => window.open('https://dozr.com/supplier')}>
                           Check it out! <FontAwesomeIcon icon={faChevronRight} size='lg' style={{
                             paddingLeft: '8px',
                           }}/>
@@ -414,12 +317,12 @@ class Home extends Component {
                     </Block>
                     </Block>
 
-                    <Block className='span-12' style={{
+                    <Block className='span-12 project' style={{
                       height: '50%',
                       width: '100%',
                       margin: 'auto',
                       marginBottom: '12px',
-                      background: 'url("https://i.imgur.com/TSxSEDg.png") no-repeat',
+                      background: 'url("https://res.cloudinary.com/ckportfolio/image/upload/v1544979513/login.jpg") no-repeat',
                       backgroundSize: '100% auto',
                       backgroundPosition: 'center',
                       backgroundColor: '#191919',
@@ -462,7 +365,7 @@ class Home extends Component {
                   }}>
                     <Fade>
                       <Block>
-                        DOZR Web/DOZR Native
+                        DOZR Pong
                         <Block style={{
                             backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))',
                             height: '1px',
@@ -507,13 +410,13 @@ class Home extends Component {
                   margin: 'auto',
                   padding: '0 0 20% 0',
                   }}>
-                    <Block className='span-12' style={{
+                    <Block className='span-12 project' style={{
                         height: '50%',
                         width: '100%',
                         margin: 'auto',
                         marginBottom: '12px',
                         marginTop: '10%',
-                        background: 'url("https://i.imgur.com/0gwUJaA.png") no-repeat',
+                        background: 'url("https://res.cloudinary.com/ckportfolio/image/upload/v1544980442/dozrPongSS.jpg") no-repeat',
                         backgroundSize: '100% auto',
                         backgroundPosition: 'center',
                         backgroundColor: '#191919',
@@ -521,7 +424,7 @@ class Home extends Component {
 
                       }}
                     >
-                    <Block className='projectOverlay overlayLinkDozr' onClick={() => window.open('https://dozr.com/earnings')}>
+                    <Block className='projectOverlay overlayLinkDozr' onClick={() => window.open('https://pong.dozr.com/')}>
                       <Block className='overlayText' style={{
                           verticalAlign: 'middle',
                         }}>
@@ -534,12 +437,12 @@ class Home extends Component {
                     </Block>
                     </Block>
 
-                    <Block className='span-12' style={{
+                    <Block className='span-12 project' style={{
                       height: '50%',
                       width: '100%',
                       margin: 'auto',
                       marginBottom: '12px',
-                      background: 'url("https://i.imgur.com/TSxSEDg.png") no-repeat',
+                      background: 'url("https://res.cloudinary.com/ckportfolio/image/upload/v1544980437/dozrPongSS2.jpg") no-repeat',
                       backgroundSize: '100% auto',
                       backgroundPosition: 'center',
                       backgroundColor: '#191919',
@@ -547,7 +450,7 @@ class Home extends Component {
 
                     }}
                     >
-                    <Block className='projectOverlay overlayLinkDozr' onClick={() => window.open('https://dozr.com/login')}>
+                    <Block className='projectOverlay overlayLinkDozr' onClick={() => window.open('https://pong.dozr.com/player/Connor')}>
                       <Block className='overlayText' style={{
                           verticalAlign: 'middle',
                         }}>
@@ -579,33 +482,41 @@ class Home extends Component {
 
 
           <Block className='projectCard' style={{
-              background: 'url("https://i.imgur.com/GsXG51J.png") no-repeat',
+              background: 'url("https://res.cloudinary.com/ckportfolio/image/upload/v1544979210/dozrpong.jpg") no-repeat',
               backgroundSize: '80% auto',
               backgroundPosition: 'center',
-              backgroundColor: '#191919',
-
+              backgroundColor: 'black',
             }}>
             <Block className='projectOverlay'>
               <Block className='overlayText dozrOverlay'>
                 <Block className='toolsUsedHeader'>
                   Built with...
                 </Block>
-                <img src='https://i.imgur.com/qLgizjN.png' style={{
-                    maxWidth: '50%',
+                <img src='https://res.cloudinary.com/ckportfolio/image/upload/v1544979209/css.png' style={{
+                    maxWidth: '33.3%',
                     maxHeight: '35%',
                     margin: 'auto',
                     display: 'inline',
                     padding: '8px',
                     marginTop: '5%',
                   }} />
-                  <img src='https://i.imgur.com/9bRalzr.png' style={{
-                      maxWidth: '50%',
+                  <img src='https://res.cloudinary.com/ckportfolio/image/upload/v1544979209/reactLogo.png' style={{
+                      maxWidth: '33.3%',
                       maxHeight: '35%',
                       margin: 'auto',
                       display: 'inline',
                       padding: '8px',
                       marginTop: '5%',
                     }} />
+                    <img src='https://res.cloudinary.com/ckportfolio/image/upload/v1544980060/materialLogo.webp' style={{
+                        maxWidth: '33.3%',
+                        maxHeight: '35%',
+                        margin: 'auto',
+                        display: 'inline',
+                        padding: '8px',
+                        marginTop: '5%',
+                      }} />
+
               </Block>
             </Block>
           </Block>
@@ -614,130 +525,17 @@ class Home extends Component {
             height: 0,
             width: '100%',
           }}>
-          <Particles style={{
-              height: '100%',
-              width: '100%',
-              zIndex: '-1',
-              position: 'absolute',
-              backgroundAttachment: 'fixed',
-              boxSizing: 'border-box !important',
-            }} params={{
-              "particles": {
-                   "number": {
-                     "value": 300,
-                     "density": {
-                       "enable": true,
-                       "value_area": 5839.692548078818
-                     }
-                   },
-                   "color": {
-                     "value": ["#ffffff",'#915e5e',"#282525","#b56317", '#c3bebb']
-                   },
-                   "shape": {
-                     "type": "circle",
-                     "stroke": {
-                       "width": 5,
-                       "color": "#000000"
-                     },
-                     "polygon": {
-                       "nb_sides": 5
-                     },
-                     "image": {
-                       "src": "img/github.svg",
-                       "width": 100,
-                       "height": 100
-                     }
-                   },
-                   "opacity": {
-                     "value": 0.44093831673801875,
-                     "random": true,
-                     "anim": {
-                       "enable": false,
-                       "speed": 1,
-                       "opacity_min": 0.1,
-                       "sync": false
-                     }
-                   },
-                   "size": {
-                     "value": 4.008530152163807,
-                     "random": true,
-                     "anim": {
-                       "enable": false,
-                       "speed": 40,
-                       "size_min": 0.1,
-                       "sync": false
-                     }
-                   },
-                   "line_linked": {
-                     "enable": false,
-                     "distance": 150,
-                     "color": "#ffffff",
-                     "opacity": 0.4,
-                     "width": 1
-                   },
-                   "move": {
-                     "enable": true,
-                     "speed": 4,
-                     "direction": "bottom-left",
-                     "random": true,
-                     "straight": false,
-                     "out_mode": "out",
-                     "bounce": false,
-                     "attract": {
-                       "enable": false,
-                       "rotateX": 600,
-                       "rotateY": 1200
-                     }
-                   }
-                 },
-                 "interactivity": {
-                   "detect_on": "canvas",
-                   "events": {
-                     "onhover": {
-                       "enable": true,
-                       "mode": "repulse"
-                     },
-                     "onclick": {
-                       "enable": true,
-                       "mode": "push"
-                     },
-                     "resize": true
-                   },
-                   "modes": {
-                     "grab": {
-                       "distance": 400,
-                       "line_linked": {
-                         "opacity": 1
-                       }
-                     },
-                     "bubble": {
-                       "distance": 400,
-                       "size": 40,
-                       "duration": 2,
-                       "opacity": 8,
-                       "speed": 3
-                     },
-                     "repulse": {
-                       "distance": 200,
-                       "duration": 0.4
-                     },
-                     "push": {
-                       "particles_nb": 4
-                     },
-                     "remove": {
-                       "particles_nb": 2
-                     }
-                   }
-                 },
-                 "retina_detect": true
-          }} />
+          <ParticlesAbout />
         <Block style={{
             display: 'inline-block',
           }}
+          id='aboutSectionStart'
         >
           <About />
         </Block>
         </Block>
+
+
       </Block>
 
     );

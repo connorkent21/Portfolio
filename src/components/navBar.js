@@ -21,7 +21,8 @@ const styles = {
   appBar: {
     transition: 'all .5s',
     background: 'transparent',
-
+    right: 'auto !important',
+    width: '100vw !important',
   },
   transparentBar: {
     background: 'rgba(246,241,237, 0.8)',
@@ -64,7 +65,7 @@ function NavBar(props) {
               <FontAwesomeIcon
                 icon={faLinkedin}
                 size='3x'
-                className={`navBarButton ${props.onTop ? 'glowTop' : 'glow'}`}
+                className={`navBarButton`}
                 onClick={() => {
                   window.open('https://www.linkedin.com/in/connorkent1/');
                 }}
@@ -80,7 +81,7 @@ function NavBar(props) {
             <FontAwesomeIcon
               icon={faGithubSquare}
               size='3x'
-              className={`navBarButton ${props.onTop ? 'glowTop' : 'glow'}`}
+              className={`navBarButton`}
               onClick={() => {
                 window.open('https://github.com/connorkent21');
               }}
