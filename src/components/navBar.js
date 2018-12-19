@@ -58,7 +58,17 @@ function NavBar(props) {
       <div className={classes.root}>
         <AppBar position="fixed" className={props.onTop ? classes.appBar : `${classes.appBar} ${classes.transparentBar}`}>
           <Toolbar>
-            <Typography variant="h6" color={props.onTop ? 'primary' : "inherit"} className={classes.grow}>
+            <Typography
+              variant="h6"
+              color={props.onTop ? 'primary' : "inherit"}
+              className={`${classes.grow} homeButton`}
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth',
+                });
+              }}
+              >
               C K
             </Typography>
             <Typography color={props.onTop ? 'primary' : "inherit"} >

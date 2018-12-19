@@ -591,6 +591,9 @@ a {
 }
 
 .appearOnHover {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   transition: all .15s ease-out;
   margin: auto;
   opacity: 0;
@@ -601,6 +604,13 @@ a {
 
 .contactIcon:hover + .appearOnHover {
   opacity: 1;
+}
+.homeButton {
+  transition: all .15s;
+}
+
+.homeButton:hover {
+  cursor: pointer;
 }
 
 
