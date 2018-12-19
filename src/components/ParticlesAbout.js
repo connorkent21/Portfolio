@@ -12,6 +12,7 @@ function ParticlesAbout(props) {
         position: 'absolute',
         backgroundAttachment: 'fixed',
         boxSizing: 'border-box !important',
+        background: 'linearGradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), #c3bebb )'
       }} params={{
         "particles": {
              "number": {

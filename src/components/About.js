@@ -102,6 +102,7 @@ function About(props) {
           </Grid>
         </Paper>
       </main>
+
     </MuiThemeProvider>
 
   );

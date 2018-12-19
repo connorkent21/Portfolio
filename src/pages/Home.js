@@ -23,6 +23,7 @@ import About from '../components/About';
 import ParticlesTop from '../components/ParticlesTop';
 import ParticlesAbout from '../components/ParticlesAbout';
 import ContactModal from '../components/ContactModal';
+import Footer from '../components/Footer';
 
 
 import '../styles/master.css'
@@ -522,17 +523,33 @@ class Home extends Component {
           </Block>
         </section>
         <Block style={{
-            height: 0,
-            width: '100%',
+            display: 'table',
           }}>
-          <ParticlesAbout />
-        <Block style={{
-            display: 'inline-block',
-          }}
-          id='aboutSectionStart'
-        >
-          <About />
+          <Block style={{
+              height: 0,
+              width: '100%',
+            }}>
+            <ParticlesAbout />
+          </Block>
+
+          <Block style={{
+              display: 'table-cell',
+              height: 'auto',
+              verticalAlign: 'middle',
+            }}
+            id='aboutSectionStart'
+          >
+            <About />
+          </Block>
+
+
         </Block>
+
+        <Block style={{
+            backgroundColor: '#f6f1ed',
+            height: 'auto',
+          }}>
+          <Footer />
         </Block>
 
 
