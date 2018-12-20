@@ -81,7 +81,7 @@ return(
       shouldCloseOnEsc={true}
       onclick={props.exitModal}
     >
-        <Fade bottom big>
+        <Fade bottom big >
         <main className={classes.main}>
             <Grid container spacing={24}>
               <Grid item xs={12} md={4}>
