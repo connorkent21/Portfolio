@@ -87,95 +87,106 @@ class Home extends Component {
               display={this.state.showContact}
             />
           <Block style={{
-              width: '80%',
-              margin: 'auto',
-              textAlign: 'center',
-              marginTop: this.state.topHeight,
-              height: 'auto',
-              zIndex: '1',
-              paddingTop: '15%',
-            }}
-            >
-
-              <Zoom duration={2500} onReveal={() => {
-                  this.setState({doneTyping: true})
-                }}>
-                <span className='typedTitle' style={{margin: 'auto', textAlign: 'center'}}>
-                  CONNOR KENT
-                </span>
-              </Zoom>
-              <Block className={this.state.lineBreakWidth ? 'lineBreak length' : 'lineBreak noLength'}></Block>
-
-
+              display: 'inline-flex',
+              height: '100vh',
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginTop: '25%',
+            }}>
             <Block style={{
+                display: 'block',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '80%',
                 margin: 'auto',
-                display: this.state.topHeight == '0%' ? 'block' : 'none',
-                paddingTop: '50px',
-              }}>
-              <Fade bottom big  when={this.state.doneTyping}>
-                <Block className='typedMenu' onClick={() => {
+                textAlign: 'center',
+                marginTop: this.state.topHeight,
+                height: 'auto',
+                zIndex: '1',
+              }}
+              >
+
+                <Zoom duration={2500} onReveal={() => {
+                    this.setState({doneTyping: true})
+                  }}>
+                  <span className='typedTitle' style={{margin: 'auto', textAlign: 'center'}}>
+                    CONNOR KENT
+                  </span>
+                </Zoom>
+                <Block className={this.state.lineBreakWidth ? 'lineBreak length' : 'lineBreak noLength'}></Block>
+
+
+              <Block style={{
+                  margin: 'auto',
+                  display: this.state.topHeight == '0%' ? 'block' : 'none',
+                  paddingTop: '50px',
+                }}>
+                <Fade bottom big  when={this.state.doneTyping}>
+                  <Block className='typedMenu' onClick={() => {
+                      const projects = document.getElementsByClassName('projectsGrid')[0];
+                      projects.scrollIntoView({
+                        block: 'start',
+                        behavior: 'smooth',
+                      });
+                    }}>
+                    Projects
+                  </Block>
+                </Fade>
+                <Fade bottom big when={this.state.doneTyping} delay={500}>
+                  <Block className='typedMenu' onClick={() => {
+                      this.setState({showPDF: true});
+                    }}>
+                    Resume
+                  </Block>
+                </Fade>
+
+                <Fade bottom big when={this.state.doneTyping} delay={1000}>
+                  <Block className='typedMenu' onClick={() => {
+                      const about = document.getElementById('aboutSectionStart');
+                      about.scrollIntoView({
+                        block: 'start',
+                        behavior: 'smooth',
+                      });
+                    }}>
+                    About Me
+                  </Block>
+                </Fade>
+
+                <Fade bottom big when={this.state.doneTyping} delay={1500} onReveal={() => {
+                    this.setState({lineBreakWidth: '30%'});
+                  }}>
+                  <Block className='typedMenu' onClick={() => {
+                      this.setState({showContact: true});
+                    }}>
+                    Contact
+                  </Block>
+                </Fade>
+              </Block>
+
+              <Block style={{
+                  margin: 'auto',
+                  marginTop: '20px',
+                  width: '75px',
+                  height: '120px',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                  color: '#f6f1ed',
+                }} className='pointer' onClick={() => {
                     const projects = document.getElementsByClassName('projectsGrid')[0];
                     projects.scrollIntoView({
                       block: 'start',
                       behavior: 'smooth',
                     });
                   }}>
-                  Projects
-                </Block>
-              </Fade>
-              <Fade bottom big when={this.state.doneTyping} delay={500}>
-                <Block className='typedMenu' onClick={() => {
-                    this.setState({showPDF: true});
-                  }}>
-                  Resume
-                </Block>
-              </Fade>
+                <Fade big delay={2500}>
+                  <FontAwesomeIcon icon={faChevronDown} size='lg' className='scrollArrow'/>
+                </Fade>
+              </Block>
 
-              <Fade bottom big when={this.state.doneTyping} delay={1000}>
-                <Block className='typedMenu' onClick={() => {
-                    const about = document.getElementById('aboutSectionStart');
-                    about.scrollIntoView({
-                      block: 'start',
-                      behavior: 'smooth',
-                    });
-                  }}>
-                  About Me
-                </Block>
-              </Fade>
 
-              <Fade bottom big when={this.state.doneTyping} delay={1500} onReveal={() => {
-                  this.setState({lineBreakWidth: '30%'});
-                }}>
-                <Block className='typedMenu' onClick={() => {
-                    this.setState({showContact: true});
-                  }}>
-                  Contact
-                </Block>
-              </Fade>
             </Block>
-
-            <Block style={{
-                margin: 'auto',
-                marginTop: '20px',
-                width: '75px',
-                height: '120px',
-                alignItems: 'center',
-                textAlign: 'center',
-                color: '#f6f1ed',
-              }} className='pointer' onClick={() => {
-                  const projects = document.getElementsByClassName('projectsGrid')[0];
-                  projects.scrollIntoView({
-                    block: 'start',
-                    behavior: 'smooth',
-                  });
-                }}>
-              <Fade big delay={2500}>
-                <FontAwesomeIcon icon={faChevronDown} size='lg' className='scrollArrow'/>
-              </Fade>
-            </Block>
-
-
           </Block>
+
 
 
         </Block>
