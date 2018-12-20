@@ -77,6 +77,9 @@ return(
         width: '80%',
         display: props.display ? 'block' : 'none',
       }}
+      shouldCloseOnOverlayClick={true}
+      shouldCloseOnEsc={true}
+      onclick={props.exitModal}
     >
         <Fade bottom big>
         <main className={classes.main}>
@@ -114,9 +117,6 @@ return(
                 </Typography>
               </Grid>
             </Grid>
-            <div className='modalButton' onClick={props.exitModal}>
-              Close
-            </div>
         </main>
 
       </Fade>

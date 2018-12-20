@@ -60,25 +60,25 @@ function Footer(props) {
       <main className={classes.main}>
         <Grid container spacing={24} className={classes.container}>
           <Grid item spacing xs={12}>
-            <Typography className='footerOption'>
+            <Typography className='footerOption' onClick={props.projectsLink}>
               Projects
             </Typography>
           </Grid>
 
           <Grid item spacing xs={12}>
-            <Typography className='footerOption'>
+            <Typography className='footerOption' onClick={props.aboutMeLink}>
               About Me
             </Typography>
           </Grid>
 
           <Grid item spacing xs={12}>
-            <Typography className='footerOption'>
+            <Typography className='footerOption' onClick={props.resumeLink}>
               Resume
             </Typography>
           </Grid>
 
           <Grid item spacing xs={12}>
-            <Typography className='footerOption'>
+            <Typography className='footerOption' onClick={props.contactLink}>
               Contact
             </Typography>
           </Grid>

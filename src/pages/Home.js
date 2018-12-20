@@ -523,7 +523,7 @@ class Home extends Component {
           </Block>
         </section>
         <Block style={{
-            display: 'table',
+            display: 'inline-block',
           }}>
           <Block style={{
               height: 0,
@@ -533,9 +533,10 @@ class Home extends Component {
           </Block>
 
           <Block style={{
-              display: 'table-cell',
-              height: 'auto',
-              verticalAlign: 'middle',
+              display: 'flex',
+              height: '100%',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
             id='aboutSectionStart'
           >
@@ -549,7 +550,28 @@ class Home extends Component {
             backgroundColor: '#f6f1ed',
             height: 'auto',
           }}>
-          <Footer />
+          <Footer
+            projectsLink={() => {
+              const projects = document.getElementsByClassName('projectsGrid')[0];
+              projects.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+              });
+            }}
+            aboutMeLink={() => {
+              const about = document.getElementById('aboutSectionStart');
+              about.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+              });
+            }}
+            resumeLink={() => {
+              this.setState({showPDF: true});
+            }}
+            contactLink={() => {
+              this.setState({showContact: true});
+            }}
+          />
         </Block>
 
 
