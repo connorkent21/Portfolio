@@ -8,7 +8,8 @@ import Particles from 'react-particles-js';
 function ParticlesAbout(props) {
   return (
     <Particles style={{
-        zIndex: '0',
+        zIndex: '-5',
+        display: 'inline',
         position: 'absolute',
         backgroundAttachment: 'fixed',
         boxSizing: 'border-box !important',

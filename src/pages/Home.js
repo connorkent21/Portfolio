@@ -523,7 +523,8 @@ class Home extends Component {
           </Block>
         </section>
         <Block style={{
-            display: 'inline-block',
+            display: 'inline',
+            maxWidth: '100vw',
           }}>
           <Block style={{
               height: 0,
@@ -533,10 +534,8 @@ class Home extends Component {
           </Block>
 
           <Block style={{
-              display: 'flex',
+              display: 'inline',
               height: '100%',
-              justifyContent: 'center',
-              alignItems: 'center',
             }}
             id='aboutSectionStart'
           >

@@ -13,11 +13,12 @@ import Fade from 'react-reveal/Fade';
 
 const styles = {
   main: {
-    height: '50vh',
-    margin: '50px auto',
+    display: 'inline',
+    top: '25%',
   },
   paper: {
-    padding: '32px',
+    padding: '20vh 10vw',
+
     display: 'table-cell',
     verticalAlign: 'middle',
     background: 'transparent',
