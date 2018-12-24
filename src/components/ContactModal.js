@@ -41,6 +41,7 @@ const styles = {
   },
   contactIcons: {
     fontSize: '150px',
+    lineHeight: '50%',
   }
 };
 
@@ -84,7 +85,7 @@ return(
         <Fade bottom big >
         <main className={classes.main}>
             <Grid container spacing={24}>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={4} md={4}>
                 <Typography className={`${classes.contactIcons}`}>
                   <a href='mailto:connorkent21@gmail.com' className='unstyledLink'>
                     <FontAwesomeIcon icon={faEnvelope} size='1x' className='contactIcon'/>
@@ -95,7 +96,7 @@ return(
                 </Typography>
               </Grid>
 
-              <Grid item xs={12} md={4}>
+              <Grid item xs={4} md={4}>
                 <Typography className={`${classes.contactIcons}`}>
                   <a href='tel:506-380-0365' className='unstyledLink'>
                     <FontAwesomeIcon icon={faMobileAlt} size='1x' className='contactIcon' />
@@ -106,7 +107,7 @@ return(
                 </Typography>
               </Grid>
 
-              <Grid item xs={12} md={4}>
+              <Grid item xs={4} md={4}>
                 <Typography className={`${classes.contactIcons}`}>
                   <FontAwesomeIcon icon={faLinkedin} size='1x' className='contactIcon' onClick={() => {
                     window.open('https://www.linkedin.com/in/connorkent1/');

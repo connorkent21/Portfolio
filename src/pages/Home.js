@@ -197,7 +197,7 @@ class Home extends Component {
             PROJECTS
           </Block>
           <Block className='span-12' id='lineBreakProjects' style={{
-              height: '12px',
+              height: '8px',
               width: '100%',
               backgroundColor: 'black',
             }}>
@@ -206,12 +206,10 @@ class Home extends Component {
           <Block className='span-12' id='projectsShadow' style={{
               height: '12px',
               width: '100%',
-              backgroundColor: 'white',
               boxShadow: 'inset 0 12px 12px -12px rgba(0, 0, 0, 0.5)',
             }}>
 
           </Block>
-
           <Block className='projectCard' style={{
               background: 'url("https://i.imgur.com/GsXG51J.png") no-repeat',
               backgroundSize: '80% auto',
@@ -250,7 +248,7 @@ class Home extends Component {
 
           <Block className='projectCard' style={{
             }}>
-            <Block className='projectsGrid'>
+            <Block className='projectsGrid specialContainer'>
 
                 <Block className='projectsHeader underline' style={{
                     fontSize: '36px',
@@ -267,9 +265,6 @@ class Home extends Component {
                           }}></Block>
                       </Block>
                     </Fade>
-
-
-
               </Block>
 
 
@@ -283,14 +278,16 @@ class Home extends Component {
                     <span style={{
                         display: 'table-cell',
                         verticalAlign: 'middle',
+                        textAlign: 'left',
                       }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                      volutpat, nibh eu egestas fermentum, lectus mauris feugiat est,
-                      sodales semper nisi risus non ipsum. Nullam eget dolor sit amet
-                      arcu ullamcorper gravida ut a ex. Vivamus eu tincidunt massa,
-                      in luctus erat. Sed ut elit eu nisl varius varius. Ut vitae
-                      finibus purus. In justo justo, scelerisque nec odio eget,
-                      hendrerit semper turpis. Pellentesque habitant morbi tristique.
+                      DOZR is a bringing construction equipment to your door and disrupting
+                      a $9B industry by creating a market place for rental houses, contractors
+                      and micro-entrpreneurs to list their unused equipment. I built the full supplier
+                      onboarding process for the web product using primarily <span className='special'> React.js.</span>
+                    For this project I also built
+                    <span className='special'> price-analysis algorthims</span> and
+                      <span className='special'>data-scraping pipelines</span> to provide users with all the information they
+                        need before listing their equipment.
                     </span>
                   </Fade>
                 </Block>
@@ -370,7 +367,7 @@ class Home extends Component {
 
           <Block className='projectCard' style={{
             }}>
-            <Block className='projectsGrid'>
+            <Block className='projectsGrid specialContainer'>
 
                 <Block className='projectsHeader underline' style={{
                     fontSize: '36px',
@@ -393,7 +390,7 @@ class Home extends Component {
               </Block>
 
 
-                <Block className='projectCard copy' style={{
+                <Block className='projectCard copy specialContainer' style={{
                     width: '80%',
                     margin: 'auto',
                     boxSizing: 'border-box',
@@ -403,14 +400,13 @@ class Home extends Component {
                     <span style={{
                         display: 'table-cell',
                         verticalAlign: 'middle',
+                        textAlign: 'left',
                       }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                      volutpat, nibh eu egestas fermentum, lectus mauris feugiat est,
-                      sodales semper nisi risus non ipsum. Nullam eget dolor sit amet
-                      arcu ullamcorper gravida ut a ex. Vivamus eu tincidunt massa,
-                      in luctus erat. Sed ut elit eu nisl varius varius. Ut vitae
-                      finibus purus. In justo justo, scelerisque nec odio eget,
-                      hendrerit semper turpis. Pellentesque habitant morbi tristique.
+                      DOZR PONG is a in-house web application created for the famous DOZR ping-pong tournaments.
+                      DOZR pong was built primarily using <span className='special'> React.js</span>
+                    , Google's <span className='special'> Material-ui</span> and as the
+                    <span className='special'>Google Sheets Api</span>. It is used to track player rankings,
+                      game scores, upcoming games, as well as individual player stats.
                     </span>
                   </Fade>
                 </Block>
