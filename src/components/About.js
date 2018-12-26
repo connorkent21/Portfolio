@@ -32,6 +32,20 @@ const styles = {
   text: {
     fontSize: '1rem',
     fontFamily: "'Open Sans', sans-serif",
+  },
+  aboutMeCard: {
+    minHeight: '50vh',
+    width: '100%',
+    backgroundColor: 'white',
+    padding: '12px',
+    textAlign: 'center',
+    color: 'black',
+    textTransform: 'uppercase',
+    fontSize: '1.5rem',
+    fontFamily: "'Open Sans', sans-serif",
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 };
 
@@ -54,9 +68,7 @@ function About(props) {
     <MuiThemeProvider theme={theme}>
       <main id='about' className={`${classes.main} aboutSection`}>
         <Paper className={classes.paper}>
-          <Grid container spacing={24} style={{
-            display: 'inline',
-            }}>
+          <Grid container spacing={24}>
             <Grid item xs={12}>
               <Typography variant='h3' className={classes.title}>
                 <Fade big left>
@@ -68,38 +80,71 @@ function About(props) {
             <Grid item xs={12}>
               <Typography className={classes.text}>
                 <Fade right big>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                  dignissim dui sit amet purus pulvinar, a malesuada orci sagittis.
-                  Integer id ligula a purus ultricies scelerisque et id ligula.
-                  Sed vel tellus nulla. Nam in sem in eros blandit porta. Cras non
-                  finibus est. Praesent sit amet ligula ac lacus tristique sodales
-                  ac venenatis tellus. Suspendisse in feugiat enim, non tempor magna.
-                   Orci varius natoque penatibus et magnis dis parturient montes,
-
-                  Nunc ac est ex. Sed sed eros at magna blandit ornare nec non nulla. Curabitur
-                  suscipit, mi malesuada mollis vehicula, nisl neque laoreet est, a placerat nisi
-                  justo dictum tortor. Fusce fermentum, odio ut bibendum tincidunt, velit mauris
-                  lacinia ipsum, vitae feugiat elit tellus sed augue. Donec cursus leo lorem, sed
-                   consectetur metus rutrum sed. Vivamus quis lectus eget turpis facilisis pretium
-                   eget faucibus velit. Sed luctus mi elit, dapibus pulvinar nibh pretium sed. Aliquam
-                   sed urna at tortor faucibus scelerisque vitae ac leo. Fusce tincidunt sit amet nisl
-                   s suscipit
-                  bibendum. Praesent sit amet ullamcorper tortor.
-
-                  Pellentesque posuere ex ex, vel vestibulum sem feugiat sit amet. Donec tortor velit,
-                  vehicula quis volutpat quis, maximus et leo. Vivamus malesuada eros felis, a
-                  tempor mauris pretium in. Morbi tincidunt nisi tellus, et ultrices augue fringilla
-                  eu. Nam eu odio molestie nisl rutrum euismod. Vivamus rhoncus egestas odio sagittis
-                   egestas. Ut lacinia blandit risus, eget bibendum ante eleifend in. Quisque eu mattis
-                   dui. Nam a tempus libero, quis sagittis urna. Phasellus eget aliquam felis. Phasellus
-                   eget dolor et eros tincidunt commodo ac et risus. Sed tincidunt et augue eget finibus.
-                   fermentum interdum. Pellentesque urna neque, porta eu justo at, feugiat molestie
-                   neque.
+                  <span style={{width: '65%'}}>
+                    Connor Kent is a Mechatronics Engineering undergraduate student at the University of Waterloo who's passion lies in
+                    the development of efficient and elegant software design.
+                  </span>
                 </Fade>
-
-
               </Typography>
             </Grid>
+
+            <Grid item xs={4} sm={4}>
+              <Paper className={classes.aboutMeCard}>
+                <div className="flip-container" ontouchstart="this.classList.toggle('hover');">
+                	<div className="flipper">
+                		<div className="front" >
+                      <span>
+                        This is the front
+                      </span>
+                		</div>
+                		<div className="back">
+                      <span>
+                        This is not the front
+                      </span>
+                    </div>
+                	</div>
+                </div>
+              </Paper>
+            </Grid>
+
+            <Grid item xs={4} sm={4}>
+              <Paper className={classes.aboutMeCard}>
+                <div className="flip-container" ontouchstart="this.classList.toggle('hover');">
+                	<div className="flipper">
+                		<div className="front" >
+                      <span>
+                        This is the front
+                      </span>
+                		</div>
+                		<div className="back">
+                      <span>
+                        This is not the front
+                      </span>
+                    </div>
+                	</div>
+                </div>
+              </Paper>
+            </Grid>
+
+            <Grid item xs={4} sm={4}>
+              <Paper className={classes.aboutMeCard}>
+                <div className="flip-container" ontouchstart="this.classList.toggle('hover');">
+                	<div className="flipper">
+                		<div className="front" >
+                      <span>
+                        This is the front
+                      </span>
+                		</div>
+                		<div className="back">
+                      <span>
+                        This is not the front
+                      </span>
+                    </div>
+                	</div>
+                </div>
+              </Paper>
+            </Grid>
+
           </Grid>
         </Paper>
       </main>
