@@ -382,7 +382,7 @@ a {
         padding: 1.5em;
         z-index: 10;
         position: fixed;
-        top: 50%;
+        top: 75%;
         left: 50%;
         transform: translate(-50%, -50%) !important;
     }
@@ -508,7 +508,7 @@ a {
   margin: auto;
   border-radius: 5px;
   background-color: white;
-  margin-top: 50px;
+  margin-top: 10px;
   color: black;
   transition: all .3s ease-in-out;
   font-family: 'Open Sans', sans-serif;
@@ -648,6 +648,7 @@ a {
 	perspective: 1000px;
   height: 50vh;
   width: 100%;
+  border-radius: 10px;
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -660,31 +661,136 @@ a {
 	transition: 0.6s;
 	transform-style: preserve-3d;
 	position: relative;
+  border-radius: 10px;
+
 }
 
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
 	position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
+  border-radius: 10px;
+
 }
 
 /* front pane, placed above back */
 .front {
 	z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
-  background-color: green;
+  background-color: white;
 }
 
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
-  background-color: orange;
+  background-color: white;
+  color: black;
 }
+
+.skillsCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.cardLogoBG:before {
+	border-left: 100vh solid #ffffff;
+	left: 0;
+}
+
+.cardLogoBG {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  color: white;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+	/* animation: bg 10s linear infinite; */
+	background-image: linear-gradient(
+											120deg,
+                      #915e5e,
+                      #f6f1ed
+
+										);
+	width: 50%;
+  height: 50%;
+
+}
+
+.cardLogoBG:after {
+	border-right: 100vh solid #ffffff;
+	right: 0;
+}
+
+@keyframes bg {
+	50% {
+		filter: hue-rotate(360deg);
+	}
+}
+
+.topOfCard {
+  height: 75%;
+  overflow-y: scroll;
+
+}
+
+.titleOfCard {
+  height: 25%;
+  background-color: #915e5e;
+  border-radius: 0px 0px 8px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f6f1ed;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+}
+ul,ol,dl,p {
+  font-size: 1.25rem;
+}
+
+li, p {
+  line-height: 1.25;
+}
+
+
+.cardList {
+  font-size: 1.25rem;
+  text-align: left;
+  text-transform: none;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  color: #776d6d;
+}
+
+.subBullet {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

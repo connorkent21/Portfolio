@@ -15,8 +15,9 @@ const PdfModal = ({
   <Modal
     isOpen={showModal}
     onRequestClose={exitModal}
-    shouldCloseOnEsc={false}
-    shouldCloseOnOverlayClick={false}
+    shouldCloseOnOverlayClick={true}
+    shouldCloseOnEsc={true}
+    onclick={exitModal}
     ariaHideApp
     closeTimeoutMS={200}
     className="modal infoModal"
@@ -28,7 +29,8 @@ const PdfModal = ({
     }}
   >
   <div style={{
-      height: '90%',
+      marginTop: '50px',
+      height: '75%',
       width: '80vw',
       backgroundColor: 'black',
       border: '1px solid #f6f1ed',

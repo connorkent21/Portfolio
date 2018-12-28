@@ -66,8 +66,6 @@ return(
     <Modal
       isOpen={props.showModal}
       onRequestClose={props.exitModal}
-      shouldCloseOnEsc={false}
-      shouldCloseOnOverlayClick={false}
       ariaHideApp
       closeTimeoutMS={200}
       className="contactModal"

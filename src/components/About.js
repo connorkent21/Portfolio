@@ -8,6 +8,9 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Typing from 'react-typing-animation';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons';
+import { faDesktop, faBriefcase, faUser, faChevronCircleRight} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -36,7 +39,7 @@ const styles = {
   aboutMeCard: {
     minHeight: '50vh',
     width: '100%',
-    backgroundColor: 'white',
+    background: 'transparent',
     padding: '12px',
     textAlign: 'center',
     color: 'black',
@@ -88,57 +91,198 @@ function About(props) {
               </Typography>
             </Grid>
 
-            <Grid item xs={4} sm={4}>
-              <Paper className={classes.aboutMeCard}>
+            <Grid item xs={12} md={4}>
+              <Paper className={`${classes.aboutMeCard} `}>
                 <div className="flip-container" ontouchstart="this.classList.toggle('hover');">
                 	<div className="flipper">
-                		<div className="front" >
-                      <span>
-                        This is the front
+                		<div className="front skillsCard" >
+                      <span className='cardLogoBG'>
+                        <FontAwesomeIcon icon={faDesktop} size='4x' style={{
+                            padding: '20px',
+                          }}/>
                       </span>
                 		</div>
                 		<div className="back">
-                      <span>
-                        This is not the front
-                      </span>
+                      <div className='topOfCard'>
+                        <ul className='cardList'>
+                          <li className='handPoint'>
+                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>WEB DEV</p>
+                              <ul className='cardList'>
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>JavaScript</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>HTML5</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>CSS3</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>React.js</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Node.js</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Material-ui</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Bootstrap</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>MongoDB</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>RESTful API</p>
+                                </li>
+
+                              </ul>
+                          </li>
+
+                          <li className='handPoint'>
+                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Data</p>
+
+                              <ul className='cardList'>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Python</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Data-Pipelines</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Web-Scraping</p>
+                                </li>
+
+                              </ul>
+                          </li>
+
+                          <li className='handPoint'>
+                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Backend</p>
+
+                              <ul className='cardList'>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>C++</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Python</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>JavaScript</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Java</p>
+                                </li>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>C</p>
+                                </li>
+
+
+
+                              </ul>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div className='titleOfCard'>
+                        SKILLS
+                      </div>
                     </div>
                 	</div>
                 </div>
               </Paper>
             </Grid>
 
-            <Grid item xs={4} sm={4}>
-              <Paper className={classes.aboutMeCard}>
+            <Grid item xs={12} md={4}>
+              <Paper className={`${classes.aboutMeCard} `}>
                 <div className="flip-container" ontouchstart="this.classList.toggle('hover');">
                 	<div className="flipper">
-                		<div className="front" >
-                      <span>
-                        This is the front
+                		<div className="front skillsCard" >
+                      <span className='cardLogoBG'>
+                        <FontAwesomeIcon icon={faBriefcase} size='4x' style={{
+                            padding: '20px',
+                          }}/>
                       </span>
                 		</div>
                 		<div className="back">
-                      <span>
-                        This is not the front
-                      </span>
+                      <div className='topOfCard'>
+                        <ul className='cardList'>
+                          <li className='handPoint'>
+                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>DOZR</p>
+                          </li>
+
+                          <li className='handPoint'>
+                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Bank Of Montreal</p>
+                          </li>
+
+                          <li className='handPoint'>
+                          <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>McGrathBoyd</p>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div className='titleOfCard'>
+                        Workplaces
+                      </div>
                     </div>
                 	</div>
                 </div>
               </Paper>
             </Grid>
 
-            <Grid item xs={4} sm={4}>
-              <Paper className={classes.aboutMeCard}>
+            <Grid item xs={12} md={4}>
+              <Paper className={`${classes.aboutMeCard} `}>
                 <div className="flip-container" ontouchstart="this.classList.toggle('hover');">
                 	<div className="flipper">
-                		<div className="front" >
-                      <span>
-                        This is the front
+                		<div className="front skillsCard" >
+                      <span className='cardLogoBG'>
+                        <FontAwesomeIcon icon={faUser} size='4x' style={{
+                            padding: '20px',
+                          }}/>
                       </span>
                 		</div>
                 		<div className="back">
-                      <span>
-                        This is not the front
-                      </span>
+                      <div className='topOfCard'>
+                        <ul className='cardList'>
+                          <li className='handPoint'>
+                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Ping Pong</p>
+                          </li>
+
+                          <li className='handPoint'>
+                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Audio Production</p>
+                          </li>
+
+                          <li className='handPoint'>
+                          <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Guitar</p>
+
+                          <li className='handPoint'>
+                          <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Hockey</p>
+                          </li>
+
+
+                          </li>
+                        </ul>
+
+                      </div>
+
+                      <div className='titleOfCard'>
+                        Hobbies
+                      </div>
                     </div>
                 	</div>
                 </div>
