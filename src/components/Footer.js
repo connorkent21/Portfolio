@@ -8,6 +8,10 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Typing from 'react-typing-animation';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -59,6 +63,12 @@ function Footer(props) {
     <MuiThemeProvider theme={theme}>
       <main className={classes.main}>
         <Grid container spacing={24} className={classes.container}>
+          <Grid item spacing xs={12} className='footerLogo'>
+            <Typography className='footerLogoTitle' onClick={props.projectsLink}>
+              Connor Kent
+            </Typography>
+          </Grid>
+
           <Grid item spacing xs={12}>
             <Typography className='footerOption' onClick={props.projectsLink}>
               Projects
@@ -82,6 +92,28 @@ function Footer(props) {
               Contact
             </Typography>
           </Grid>
+
+          <Grid item spacing xs={12}>
+            <Typography>
+              <FontAwesomeIcon icon={faLinkedin} size='2x' className='footerContact' onClick={() => {
+                window.open('https://www.linkedin.com/in/connorkent1/');
+              }}/>
+              <FontAwesomeIcon icon={faGithubSquare} size='2x' className='footerContact' onClick={() => {
+                window.open('https://github.com/connorkent21');
+              }}/>
+              <a href='mailto:connorkent21@gmail.com' className='unstyledLink'>
+                <FontAwesomeIcon icon={faEnvelope} size='2x' className='footerContact'/>
+              </a>
+            </Typography>
+          </Grid>
+
+          <Grid item spacing xs={12}>
+            <Typography className='copyright'>
+              Copyright Connor Kent 2019
+            </Typography>
+          </Grid>
+
+
         </Grid>
       </main>
     </MuiThemeProvider>

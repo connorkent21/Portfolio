@@ -40,7 +40,7 @@ function ParticlesTop(props) {
                }
              },
              "opacity": {
-               "value": 0.44093831673801875,
+               "value": 0.6,
                "random": true,
                "anim": {
                  "enable": false,

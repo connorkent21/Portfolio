@@ -259,7 +259,7 @@ a {
   margin: auto;
   height: 20%;
   text-align: center;
-  color: white;
+  color: #f6f1ed;
   font-family: 'Oswald', sans-serif;
   letter-spacing: 2px;
   font-size: 36px;
@@ -288,7 +288,7 @@ a {
 .overlayText {
   display: table-cell;
   vertical-align: top;
-  color: white;
+  color: #f6f1ed;
   font-size: 20px;
   text-align: center;
   -webkit-user-select: none; /* Chrome/Safari */
@@ -388,9 +388,9 @@ a {
     }
 }
 .modal{
-    background-color: black;
+    background: transparent;
     text-align: center;
-    color: white;
+    color: #f6f1ed;
     width: 80rem;
     width: auto;
     height: 100%;;
@@ -477,7 +477,7 @@ a {
 }
 
 .modal.infoModal > div > button {
-  background: black;
+  background: transparent;
   border: none;
   color: white;
   padding: 1em;
@@ -494,7 +494,7 @@ a {
 }
 
 .infoModal {
-  background-color: black;
+  background: transparent;
   width: fit-content;
   padding-left: 0px;
   padding-right: 0px;
@@ -507,7 +507,7 @@ a {
   padding: 16px;
   margin: auto;
   border-radius: 5px;
-  background-color: white;
+  background-color: #f6f1ed;
   margin-top: 10px;
   color: black;
   transition: all .3s ease-in-out;
@@ -550,7 +550,7 @@ a {
 .contactModal {
   background: transparent;
   text-align: center;
-  color: white;
+  color: #f6f1ed;
   width: 80rem;
   width: auto;
   height: 25vh;
@@ -626,12 +626,42 @@ a {
   transition: all .3s;
 }
 
+
 .footerOption:hover {
   cursor: pointer;
   background-color: #f6f1ed;
   color: rgba(0, 0, 0, .8) !important;
   transform: scale(1.05) translate(-2px, -2px);
   box-shadow: 0 3px 8px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+}
+.footerLogo {
+  padding: 8px 12px !important;
+}
+
+.footerLogoTitle {
+  display: inline-block !important;
+  left: 0;
+  letter-spacing: 3px;
+  padding: 8px 12px;
+  border-radius: 3px;
+  transition: all .3s;
+  font-size: 2.5rem !important;
+  font-family: 'Slabo 27px', serif !important;
+  text-transform: uppercase;
+  color: #915e5e !important;
+
+}
+
+.copyright {
+  display: inline-block !important;
+  left: 0;
+  font-size: 5rem;
+  letter-spacing: 3px;
+  font-size: .75rem !important;
+  padding: 8px 12px;
+  border-radius: 3px;
+  transition: all .3s;
+  color: #c4b0b0 !important;
 }
 
 .special {
@@ -712,7 +742,7 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  color: white;
+  color: #f6f1ed;
   box-shadow: 0 3px 8px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
 	/* animation: bg 10s linear infinite; */
 	background-image: linear-gradient(
@@ -779,6 +809,20 @@ li, p {
   font-size: 1rem;
   text-transform: capitalize;
 }
+
+.footerContact {
+  color: #915e5e;
+  font-size: 4rem !important;
+  padding: 12px 8px;
+  transition: all .1s ease-in-out;
+
+}
+
+.footerContact:hover {
+    cursor: pointer !important;
+    transform: scale(1.25);
+}
+
 
 
 

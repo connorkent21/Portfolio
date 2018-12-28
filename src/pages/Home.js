@@ -365,9 +365,9 @@ class Home extends Component {
 
 
 
-          <Block className='projectCard' style={{
+          <Block className='projectCard specialContainer' style={{
             }}>
-            <Block className='projectsGrid specialContainer'>
+            <Block className='projectsGrid'>
 
                 <Block className='projectsHeader underline' style={{
                     fontSize: '36px',
@@ -390,7 +390,7 @@ class Home extends Component {
               </Block>
 
 
-                <Block className='projectCard copy specialContainer' style={{
+                <Block className='projectCard copy' style={{
                     width: '80%',
                     margin: 'auto',
                     boxSizing: 'border-box',

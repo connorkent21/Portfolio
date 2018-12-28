@@ -25,9 +25,10 @@ const styles = {
     display: 'table-cell',
     verticalAlign: 'middle',
     background: 'transparent',
-    color: 'white !important',
+    color: '#f6f1ed !important',
   },
   title: {
+    color: '#f6f1ed !important',
     textTransform: 'uppercase',
     letterSpacing: '1.25px',
     fontFamily: "'Open Sans', sans-serif",
