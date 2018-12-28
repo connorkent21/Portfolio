@@ -636,11 +636,13 @@ a {
 
 .special {
   margin: 0px 2px;
-  transition: .5s all ease-in;
+  /* transition: .25s all ease-in; */
 }
 
 .specialContainer:hover .special {
-  color: #af1616;
+  color: #915e5e;
+  font-weight: bold;
+  /* text-decoration: underline; */
 }
 
 /* entire container, keeps perspective */
@@ -682,13 +684,13 @@ a {
   padding: 8px;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
-  background-color: white;
+  background-color: #f6f1ed;
 }
 
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
-  background-color: white;
+  background-color: #f6f1ed;
   color: black;
 }
 
