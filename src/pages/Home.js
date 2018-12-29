@@ -69,7 +69,7 @@ class Home extends Component {
     return (
       <Block>
         <Block className='container'>
-          <NavBar onTop={this.state.atTop}/>
+          <NavBar onTop={this.state.atTop} page={this}/>
           <Block style={{position: 'absolute'}}>
             <ParticlesTop />
           </Block>

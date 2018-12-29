@@ -10,6 +10,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons';
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
+
 
 const styles = {
   root: {
@@ -71,6 +73,10 @@ function NavBar(props) {
               >
               C K
             </Typography>
+
+
+
+
             <Typography color={props.onTop ? 'primary' : "inherit"} >
               <FontAwesomeIcon
                 icon={faLinkedin}
@@ -97,6 +103,22 @@ function NavBar(props) {
               }}
             />
         </Typography>
+        <div style={{
+            width: '20px',
+            background: 'transparent',
+          }}
+        />
+
+        <Typography color={props.onTop ? 'primary' : "inherit"} >
+          <FontAwesomeIcon
+            icon={faAddressCard}
+            size='3x'
+            className={`navBarButton`}
+            onClick={() => {
+              props.page.setState({showContact: true});
+            }}
+          />
+      </Typography>
           </Toolbar>
         </AppBar>
       </div>

@@ -741,7 +741,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100%;
+  border-radius: 50%;
   color: #f6f1ed;
   box-shadow: 0 3px 8px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
 	/* animation: bg 10s linear infinite; */
@@ -751,8 +751,8 @@ a {
                       #f6f1ed
 
 										);
-	width: 50%;
-  height: 50%;
+    height: 20vh;
+    width: 20vh;
 
 }
 
