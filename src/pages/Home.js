@@ -24,6 +24,7 @@ import ParticlesTop from '../components/ParticlesTop';
 import ParticlesAbout from '../components/ParticlesAbout';
 import ContactModal from '../components/ContactModal';
 import Footer from '../components/Footer';
+import resume from '../components/resume.pdf';
 
 
 import '../styles/master.css'
@@ -134,7 +135,8 @@ class Home extends Component {
                 </Fade>
                 <Fade bottom big when={this.state.doneTyping} delay={500}>
                   <Block className='typedMenu' onClick={() => {
-                      this.setState({showPDF: true});
+                      console.log('trying to open the pdf');
+                      window.open(resume, '_blank');
                     }}>
                     Resume
                   </Block>
