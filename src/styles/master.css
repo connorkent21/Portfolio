@@ -868,6 +868,10 @@ li, p {
     display: none;
   }
 
+  .aboutMeText {
+    width: 90% !important;
+  }
+
 }
 
 

@@ -84,8 +84,8 @@ function About(props) {
             <Grid item xs={12}>
               <Typography className={classes.text}>
                 <Fade right big>
-                  <span style={{width: '65%'}}>
-                    Connor Kent is a Mechatronics Engineering undergraduate student at the University of Waterloo who's passion lies in
+                  <span className='aboutMeText' style={{width: '65%'}}>
+                    Connor Kent is a Mechatronics Engineering undergraduate student at the University of Waterloo whose passion lies in
                     the development of efficient and elegant software design.
                   </span>
                 </Fade>
