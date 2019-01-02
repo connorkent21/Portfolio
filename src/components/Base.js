@@ -19,7 +19,6 @@ import {
   borderRadius,
   top,
   bottom,
-  style,
   maxHeight,
   maxWidth,
   minWidth,

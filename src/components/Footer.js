@@ -1,13 +1,9 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Typing from 'react-typing-animation';
-import Zoom from 'react-reveal/Zoom';
-import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';

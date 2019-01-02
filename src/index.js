@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import Home from './pages/Home';
-import Typing from 'react-typing-animation';
-import $ from 'jquery';
 import './assets/loader.js';
 
 

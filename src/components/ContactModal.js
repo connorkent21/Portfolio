@@ -1,19 +1,15 @@
 import React from 'react';
 import Modal from 'react-modal';
-import ClipLoader from 'react-spinners/ClipLoader';
-import { Block, Flex, Copy, Shadow } from './Base';
+import { Block } from './Base';
 import Grid from '@material-ui/core/Grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import MailIcon from '@material-ui/icons/Mail';
-import PhoneIcon from '@material-ui/icons/Phone';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons';
-import { faChevronDown, faChevronRight, faEnvelope, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
 
 
 

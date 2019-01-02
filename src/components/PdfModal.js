@@ -1,7 +1,5 @@
 import React from 'react';
 import Modal from 'react-modal';
-import ClipLoader from 'react-spinners/ClipLoader';
-import { Block, Flex, Copy, Shadow } from './Base';
 
 
 

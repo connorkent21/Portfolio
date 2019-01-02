@@ -1,24 +1,11 @@
 import React, {Component} from 'react';
-import Typing from 'react-typing-animation';
-import Grid from '@material-ui/core/Grid';
-import Backdrop from '@material-ui/core/Backdrop';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import {withStyles} from '@material-ui/core/styles';
-import { Block, Flex, Copy, Shadow } from '../components/Base';
+import { Block } from '../components/Base';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
-import Flip from 'react-reveal/Flip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons';
 import { faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import Particles from 'react-particles-js';
 import PdfModal from '../components/PdfModal';
 import NavBar from '../components/navBar';
-import Carousel from 'nuka-carousel';
 import About from '../components/About';
 import ParticlesTop from '../components/ParticlesTop';
 import ParticlesAbout from '../components/ParticlesAbout';
@@ -119,7 +106,7 @@ class Home extends Component {
 
               <Block style={{
                   margin: 'auto',
-                  display: this.state.topHeight == '0%' ? 'block' : 'none',
+                  display: this.state.topHeight === '0%' ? 'block' : 'none',
                   paddingTop: '50px',
                 }}>
                 <Fade bottom big  when={this.state.doneTyping}>
@@ -231,7 +218,7 @@ class Home extends Component {
                     display: 'inline',
                     padding: '8px',
                     marginTop: '5%',
-                  }} />
+                  }} alt=''/>
                   <img src='https://i.imgur.com/9bRalzr.png' style={{
                       maxWidth: '50%',
                       maxHeight: '35%',
@@ -239,7 +226,7 @@ class Home extends Component {
                       display: 'inline',
                       padding: '8px',
                       marginTop: '5%',
-                    }} />
+                    }} alt=''/>
               </Block>
             </Block>
           </Block>
@@ -509,7 +496,7 @@ class Home extends Component {
                     display: 'inline',
                     padding: '8px',
                     marginTop: '5%',
-                  }} />
+                  }} alt=''/>
                   <img src='https://res.cloudinary.com/ckportfolio/image/upload/v1544979209/reactLogo.png' style={{
                       maxWidth: '33.3%',
                       maxHeight: '35%',
@@ -517,7 +504,7 @@ class Home extends Component {
                       display: 'inline',
                       padding: '8px',
                       marginTop: '5%',
-                    }} />
+                    }} alt=''/>
                     <img src='https://res.cloudinary.com/ckportfolio/image/upload/v1544980060/materialLogo.webp' style={{
                         maxWidth: '33.3%',
                         maxHeight: '35%',
@@ -525,7 +512,7 @@ class Home extends Component {
                         display: 'inline',
                         padding: '8px',
                         marginTop: '5%',
-                      }} />
+                      }} alt=''/>
 
               </Block>
             </Block>

@@ -5,11 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Typing from 'react-typing-animation';
-import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons';
 import { faDesktop, faBriefcase, faUser, faChevronCircleRight} from '@fortawesome/free-solid-svg-icons';
 
 
@@ -298,10 +295,10 @@ function About(props) {
 
   );
 
-  About.propTypes = {
-    classes: PropTypes.object.isRequired,
-  };
-
 }
 
-  export default withStyles(styles)(About);
+About.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(About);
