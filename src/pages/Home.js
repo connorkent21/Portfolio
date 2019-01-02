@@ -264,7 +264,7 @@ class Home extends Component {
                     display: 'table'
                   }}>
                   <Fade left className='span-6'>
-                    <span style={{
+                    <span className='projectText' style={{
                         display: 'table-cell',
                         verticalAlign: 'middle',
                         textAlign: 'left',
@@ -386,7 +386,7 @@ class Home extends Component {
                     display: 'table'
                   }}>
                   <Fade left className='span-6'>
-                    <span style={{
+                    <span className='projectText' style={{
                         display: 'table-cell',
                         verticalAlign: 'middle',
                         textAlign: 'left',
@@ -394,7 +394,7 @@ class Home extends Component {
                       DOZR PONG is a in-house web application created for the famous DOZR ping-pong tournaments.
                       DOZR pong was built primarily using <span className='special'> React.js</span>
                     , Google's <span className='special'> Material-ui</span> and as the
-                    <span className='special'>Google Sheets Api</span>. It is used to track player rankings,
+                    <span className='special'>Google Sheets Api</span>. It can be used to track player rankings,
                       game scores, upcoming games, as well as individual player stats.
                     </span>
                   </Fade>
