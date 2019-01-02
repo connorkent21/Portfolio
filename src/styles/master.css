@@ -687,6 +687,10 @@ a {
 		transform: rotateY(180deg);
 	}
 
+  .flip-container:active .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
 
 /* flip speed goes here */
 .flipper {

@@ -269,14 +269,16 @@ class Home extends Component {
                         verticalAlign: 'middle',
                         textAlign: 'left',
                       }}>
-                      DOZR is a bringing construction equipment to your door and disrupting
-                      a $9B industry by creating a market place for rental houses, contractors
-                      and micro-entrpreneurs to list their unused equipment. I built the full supplier
-                      onboarding process for the web product using primarily <span className='special'> React.js.</span>
-                    For this project I also built
-                    <span className='special'> price-analysis algorthims</span> and
-                      <span className='special'>data-scraping pipelines</span> to provide users with all the information they
-                        need before listing their equipment.
+                      Dozr taps into a $9B industry by providing construction
+                      equipment rentals as well as a rental houses to its customers.
+                      In addition to this, it creates a market in which contractors
+                      and micro-entrepreneurs can list equipment or houses. <br/>
+
+                      The entirety of the supplier onboarding process for the web
+                      product was built by me primarily through <span className='special'>React.js</span>. Additionally,
+                      I’ve created the <span className='special'>price analysis algorithms</span>and <span className='special'>data-scraping
+                      pipelines</span> that provide users with comprehensive data before
+                      they list their equipment.
                     </span>
                   </Fade>
                 </Block>
@@ -391,10 +393,10 @@ class Home extends Component {
                         verticalAlign: 'middle',
                         textAlign: 'left',
                       }}>
-                      DOZR PONG is a in-house web application created for the famous DOZR ping-pong tournaments.
+                      DOZR Pong is a in-house web application created for the famous DOZR ping-pong tournaments.
                       DOZR pong was built primarily using <span className='special'> React.js</span>
-                    , Google's <span className='special'> Material-ui</span> and as the
-                    <span className='special'>Google Sheets Api</span>. It can be used to track player rankings,
+                    , Google's <span className='special'> Material-UI</span> and as the
+                    <span className='special'>Google Sheets API</span>. It can be used to track player rankings,
                       game scores, upcoming games, as well as individual player stats.
                     </span>
                   </Fade>
