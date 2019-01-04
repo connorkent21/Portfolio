@@ -527,7 +527,7 @@ a {
 
 .navBarButton {
   transition: transform .175s;
-  border-radius: 20px;
+  overflow: visible;
 }
 
 .navBarButton:hover {
@@ -682,6 +682,11 @@ a {
   width: 100%;
   border-radius: 10px;
 }
+
+.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
+
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
 		transform: rotateY(180deg);

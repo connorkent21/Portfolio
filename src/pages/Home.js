@@ -271,8 +271,8 @@ class Home extends Component {
                       }}>
                       Dozr taps into a $9B industry by providing construction
                       equipment rentals as well as a rental houses to its customers.
-                      In addition to this, it creates a market in which contractors
-                      and micro-entrepreneurs can list equipment or houses. <br/>
+                      In addition to this, it creates a market in which contractors,
+                      rental houses and micro-entrepreneurs can list unused equipment to generate revenue. <br/>
 
                       The entirety of the supplier onboarding process for the web
                       product was built by me primarily through <span className='special'>React.js</span>. Additionally,
@@ -563,7 +563,8 @@ class Home extends Component {
               });
             }}
             resumeLink={() => {
-              this.setState({showPDF: true});
+              console.log('trying to open the pdf');
+              window.open(resume, '_blank');
             }}
             contactLink={() => {
               this.setState({showContact: true});
