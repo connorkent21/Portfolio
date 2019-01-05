@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDesktop, faBriefcase, faUser, faChevronCircleRight, faTableTennis, faGuitar, faHockeyPuck} from '@fortawesome/free-solid-svg-icons';
+import { faDesktop, faBriefcase, faUser, faChevronCircleRight, faTableTennis, faMusic, faHockeyPuck} from '@fortawesome/free-solid-svg-icons';
 import { faSoundcloud} from '@fortawesome/free-brands-svg-icons';
 
 
@@ -331,7 +331,7 @@ class About extends Component {
                             </li>
 
                             <li className='handPoint'>
-                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Guitar <FontAwesomeIcon icon={faGuitar} size='lg' style={{marginLeft: '4px'}}/></p>
+                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Guitar <FontAwesomeIcon icon={faMusic} size='lg' style={{marginLeft: '4px'}}/></p>
 
                             <li className='handPoint'>
                             <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Hockey <FontAwesomeIcon icon={faHockeyPuck} size='lg' style={{marginLeft: '4px'}}/></p>
