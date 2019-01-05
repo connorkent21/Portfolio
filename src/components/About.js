@@ -7,7 +7,9 @@ import { withStyles } from '@material-ui/core/styles';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDesktop, faBriefcase, faUser, faChevronCircleRight} from '@fortawesome/free-solid-svg-icons';
+import { faDesktop, faBriefcase, faUser, faChevronCircleRight, faTableTennis, faGuitar, faHockeyPuck} from '@fortawesome/free-solid-svg-icons';
+import { faSoundcloud} from '@fortawesome/free-brands-svg-icons';
+
 
 
 
@@ -78,6 +80,7 @@ class About extends Component {
     let selectedCard = document.getElementById(cardName);
     console.log('this is the card that we got: ', selectedCard);
     selectedCard.classList.toggle('flip');
+    selectedCard.classList.toggle('upScale');
   }
 
 
@@ -109,7 +112,7 @@ class About extends Component {
 
               <Grid item xs={12} md={4}>
                 <Paper className={`${classes.aboutMeCard} `}>
-                  <div id='skillsCardAbout' className="flip-container" ontouchstart="this.classList.toggle('hover');" onClick={() => {
+                  <div id='skillsCardAbout' className="flip-container pointer" ontouchstart="this.classList.toggle('hover');" onClick={() => {
                       this.flipCard('skillsCardAbout');
                     }}>
                   	<div className="flipper">
@@ -214,6 +217,23 @@ class About extends Component {
 
                                 </ul>
                             </li>
+
+                            <li className='handPoint'>
+                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Mobile</p>
+
+                                <ul className='cardList'>
+
+                                  <li className='handPoint'>
+                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>React Native</p>
+                                  </li>
+
+                                  <li className='handPoint'>
+                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Java</p>
+                                  </li>
+
+                                </ul>
+                            </li>
+
                           </ul>
                         </div>
 
@@ -228,7 +248,7 @@ class About extends Component {
 
               <Grid item xs={12} md={4}>
                 <Paper className={`${classes.aboutMeCard} `}>
-                  <div id='skillsCardWorkplaces' className="flip-container" ontouchstart="this.classList.toggle('hover');" onClick={() => {
+                  <div id='skillsCardWorkplaces' className="flip-container pointer" ontouchstart="this.classList.toggle('hover');" onClick={() => {
                       this.flipCard('skillsCardWorkplaces');
                     }}>
                   	<div className="flipper">
@@ -243,15 +263,36 @@ class About extends Component {
                         <div className='topOfCard'>
                           <ul className='cardList'>
                             <li className='handPoint'>
-                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>DOZR</p>
+                              <p style={{marginBottom: '0px'}}><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>DOZR</p>
+                                <ul className='cardList'>
+
+                                  <li className='handPoint'>
+                                    <p className='subBullet' style={{marginTop: '4px'}}><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Software Engineer</p>
+                                  </li>
+
+                                </ul>
                             </li>
 
                             <li className='handPoint'>
-                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Bank Of Montreal</p>
+                              <p style={{marginBottom: '0px'}}><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Bank Of Montreal</p>
+                                <ul className='cardList'>
+
+                                  <li className='handPoint'>
+                                    <p className='subBullet' style={{marginTop: '4px'}}><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>IT Operations Analyst</p>
+                                  </li>
+
+                                </ul>
                             </li>
 
                             <li className='handPoint'>
-                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>McGrathBoyd</p>
+                            <p style={{marginBottom: '0px'}}><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>McGrathBoyd</p>
+                              <ul className='cardList'>
+
+                                <li className='handPoint'>
+                                  <p className='subBullet' style={{marginTop: '4px'}}><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Legal Secretary</p>
+                                </li>
+
+                              </ul>
                             </li>
                           </ul>
                         </div>
@@ -267,7 +308,7 @@ class About extends Component {
 
               <Grid item xs={12} md={4}>
                 <Paper className={`${classes.aboutMeCard} `}>
-                  <div id='skillsCardHobbies' className="flip-container" ontouchstart="this.classList.toggle('hover');" onClick={() => {
+                  <div id='skillsCardHobbies' className="flip-container pointer" ontouchstart="this.classList.toggle('hover');" onClick={() => {
                       this.flipCard('skillsCardHobbies');
                     }}>
                   	<div className="flipper">
@@ -282,18 +323,18 @@ class About extends Component {
                         <div className='topOfCard'>
                           <ul className='cardList'>
                             <li className='handPoint'>
-                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Ping Pong</p>
+                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Ping Pong <FontAwesomeIcon icon={faTableTennis} size='lg' style={{marginLeft: '4px'}}/></p>
                             </li>
 
                             <li className='handPoint'>
-                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Audio Production</p>
+                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Audio Production <FontAwesomeIcon icon={faSoundcloud} size='lg' style={{marginLeft: '4px'}}/></p>
                             </li>
 
                             <li className='handPoint'>
-                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Guitar</p>
+                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Guitar <FontAwesomeIcon icon={faGuitar} size='lg' style={{marginLeft: '4px'}}/></p>
 
                             <li className='handPoint'>
-                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Hockey</p>
+                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Hockey <FontAwesomeIcon icon={faHockeyPuck} size='lg' style={{marginLeft: '4px'}}/></p>
                             </li>
 
 

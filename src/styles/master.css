@@ -681,6 +681,7 @@ a {
   height: 50vh;
   width: 100%;
   border-radius: 10px;
+  transition: .25s transform ease-in-out;
 }
 
 .flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
@@ -688,13 +689,17 @@ a {
 }
 
 	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
+	/* .flip-container:hover .flipper, .flip-container.hover .flipper {
 		transform: rotateY(180deg);
 	}
 
   .flip-container:active .flipper, .flip-container.hover .flipper {
     transform: rotateY(180deg);
-  }
+  } */
+
+.upScale {
+  transform: scale(1.05);
+}
 
 
 /* flip speed goes here */

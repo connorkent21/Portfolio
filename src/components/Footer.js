@@ -105,7 +105,7 @@ function Footer(props) {
 
           <Grid item spacing xs={12}>
             <Typography className='copyright'>
-              Copyright Connor Kent 2019
+              // Copyright Connor Kent 2019
             </Typography>
           </Grid>
 
