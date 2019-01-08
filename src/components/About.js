@@ -158,6 +158,10 @@ class About extends Component {
                                   </li>
 
                                   <li className='handPoint'>
+                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>JQuery</p>
+                                  </li>
+
+                                  <li className='handPoint'>
                                     <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>MongoDB</p>
                                   </li>
 

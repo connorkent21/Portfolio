@@ -269,7 +269,7 @@ class Home extends Component {
                         verticalAlign: 'middle',
                         textAlign: 'left',
                       }}>
-                      Dozr taps into a $9B industry by providing construction
+                      Dozr taps into a $92B industry by providing construction
                       equipment rentals as well as a rental houses to its customers.
                       In addition to this, it creates a market in which contractors,
                       rental houses and micro-entrepreneurs can list unused equipment to generate revenue. <br/>
