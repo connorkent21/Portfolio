@@ -199,6 +199,7 @@ class Home extends Component {
             }}>
 
           </Block>
+
           <Block className='projectCard' style={{
               background: 'url("https://i.imgur.com/GsXG51J.png") no-repeat',
               backgroundSize: '80% auto',
@@ -519,6 +520,179 @@ class Home extends Component {
               </Block>
             </Block>
           </Block>
+
+
+
+          <Block className='projectCard' style={{
+              background: 'url("https://res.cloudinary.com/ckportfolio/image/upload/v1547066118/cnTower.png") no-repeat',
+              backgroundSize: 'auto',
+              backgroundPosition: 'center',
+              backgroundColor: '#191919',
+
+            }}>
+            <Block className='projectOverlay'>
+              <Block className='overlayText dozrOverlay'>
+                <Block className='toolsUsedHeader'>
+                  Built with...
+                </Block>
+                <img src='https://res.cloudinary.com/ckportfolio/image/upload/v1544979209/css.png' style={{
+                    maxWidth: '33.3%',
+                    maxHeight: '35%',
+                    margin: 'auto',
+                    display: 'inline',
+                    padding: '8px',
+                    marginTop: '5%',
+                  }} alt=''/>
+                  <img src='https://res.cloudinary.com/ckportfolio/image/upload/v1544979209/reactLogo.png' style={{
+                      maxWidth: '33.3%',
+                      maxHeight: '35%',
+                      margin: 'auto',
+                      display: 'inline',
+                      padding: '8px',
+                      marginTop: '5%',
+                    }} alt=''/>
+                    <img src='https://res.cloudinary.com/ckportfolio/image/upload/v1544980060/materialLogo.webp' style={{
+                        maxWidth: '33.3%',
+                        maxHeight: '35%',
+                        margin: 'auto',
+                        display: 'inline',
+                        padding: '8px',
+                        marginTop: '5%',
+                      }} alt=''/>
+              </Block>
+            </Block>
+          </Block>
+
+
+
+
+
+          <Block className='projectCard' style={{
+            }}>
+            <Block className='projectsGrid specialContainer'>
+
+                <Block className='projectsHeader underline' style={{
+                    fontSize: '36px',
+                  }}>
+                    <Fade>
+                      <Block>
+                        Toronto Waste Lookup
+                        <Block style={{
+                            backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))',
+                            height: '1px',
+                            width: '75%',
+                            margin: 'auto',
+                            gridColumn: 'span 12',
+                          }}></Block>
+                      </Block>
+                    </Fade>
+              </Block>
+
+
+                <Block className='projectCard copy' style={{
+                    width: '80%',
+                    margin: 'auto',
+                    boxSizing: 'border-box',
+                    display: 'table'
+                  }}>
+                  <Fade left className='span-6'>
+                    <span className='projectText' style={{
+                        display: 'table-cell',
+                        verticalAlign: 'middle',
+                        textAlign: 'left',
+                      }}>
+                      Toronto Waste Lookup is a information system built using <span className='special'>React.js</span> and
+                      <span className='special'>Material-UI</span> to aid users in effectively sorting their garbage .
+                      <br />
+                      This web application makes use of public data published by the City of Toronto and allows users
+                      to search and favorite commonly disposed items. Results are displayed with instructions on how to properly dispose of
+                      the chosen item.
+                    </span>
+                  </Fade>
+                </Block>
+
+
+                <Block className='projectCard' style={{
+                  boxSizing: 'border-box',
+                  width: '80%',
+                  margin: 'auto',
+                  padding: '0 0 20% 0',
+                  }}>
+                    <Block className='span-12 project' style={{
+                        height: '50%',
+                        width: '100%',
+                        margin: 'auto',
+                        marginBottom: '12px',
+                        marginTop: '10%',
+                        background: 'url("https://res.cloudinary.com/ckportfolio/image/upload/v1547066381/waste1.jpg") no-repeat',
+                        backgroundSize: '100% auto',
+                        backgroundPosition: 'center',
+                        backgroundColor: '#191919',
+                        boxShadow: '5px 8px 32px -4px rgba(0,0,0,0.67)',
+
+                      }}
+                    >
+                    <Block className='projectOverlay' onClick={() => window.open('https://sharp-hopper-eec323.netlify.com/')}>
+                      <Block className='overlayText' style={{
+                          verticalAlign: 'middle',
+                        }}>
+                        <span className='overlayLinkWaste'>
+                          Check it out! <FontAwesomeIcon icon={faChevronRight} size='lg' style={{
+                            paddingLeft: '8px',
+                          }}/>
+                        </span>
+                      </Block>
+                    </Block>
+                    </Block>
+
+                    <Block className='span-12 project' style={{
+                      height: '50%',
+                      width: '100%',
+                      margin: 'auto',
+                      marginBottom: '12px',
+                      background: 'url("https://res.cloudinary.com/ckportfolio/image/upload/v1547066375/waste.jpg") no-repeat',
+                      backgroundSize: '100% auto',
+                      backgroundPosition: 'center',
+                      backgroundColor: '#191919',
+                      boxShadow: '5px 8px 32px -4px rgba(0,0,0,0.67)',
+
+                    }}
+                    >
+                    <Block className='projectOverlay' onClick={() => window.open('https://sharp-hopper-eec323.netlify.com/')}>
+                      <Block className='overlayText' style={{
+                          verticalAlign: 'middle',
+                        }}>
+                        <span className='overlayLinkWaste'>
+                          Check it out! <FontAwesomeIcon icon={faChevronRight} size='lg' style={{
+                            paddingLeft: '8px',
+                          }}/>
+                        </span>
+
+                      </Block>
+                    </Block>
+
+                    </Block>
+
+
+
+                </Block>
+
+
+
+            </Block>
+          </Block>
+
+
+
+
+
+
+
+
+
+
+
+
         </section>
         <Block style={{
             display: 'inline',
