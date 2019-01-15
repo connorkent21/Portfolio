@@ -621,7 +621,7 @@ class Home extends Component {
                     <Block className='span-12 project' style={{
                         height: '50%',
                         width: '100%',
-                        margin: 'auto',
+                        margin: '100 auto',
                         marginBottom: '12px',
                         marginTop: '10%',
                         background: 'url("https://res.cloudinary.com/ckportfolio/image/upload/v1547066381/waste1.jpg") no-repeat',
