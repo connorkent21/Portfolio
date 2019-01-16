@@ -394,8 +394,8 @@ class Home extends Component {
                         verticalAlign: 'middle',
                         textAlign: 'left',
                       }}>
-                      DOZR Pong is an in-house web application created for the famous DOZR ping-pong tournaments.
-                      DOZR pong was built primarily using <span className='special'> React</span>
+                      DOZR Pong is an in-house web application created for the company ping-pong tournaments.
+                      DOZR pong is a collaborative project built primarily using <span className='special'> React</span>
                     , Google's <span className='special'> Material-UI</span> and the
                     <span className='special'>Google Sheets API</span>. It can be used to track player rankings,
                       game scores, upcoming games, as well as individual player stats.
