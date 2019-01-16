@@ -277,7 +277,7 @@ class Home extends Component {
 
                       The entirety of the supplier onboarding process for the web
                       product was built by me primarily with <span className='special'>React</span>. Additionally,
-                      I’ve also created <span className='special'>price analysis algorithms</span>and <span className='special'>data-scraping
+                      I’ve also created <span className='special'>price analysis algorithms</span> and <span className='special'>data-scraping
                       pipelines</span> to provide users with comprehensive data before
                       they list their equipment.
                     </span>
@@ -601,7 +601,7 @@ class Home extends Component {
                         verticalAlign: 'middle',
                         textAlign: 'left',
                       }}>
-                      Toronto Waste Lookup is a information system built using <span className='special'>React</span> and
+                      Toronto Waste Lookup is an information system built using <span className='special'>React</span> and
                       <span className='special'>Material-UI</span> to aid users in effectively sorting their garbage.
                       <br />
                       This web application makes use of public data published by the City of Toronto and allows users
