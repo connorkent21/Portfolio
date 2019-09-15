@@ -200,6 +200,163 @@ class Home extends Component {
 
           </Block>
 
+
+          <Block className='projectCard' style={{
+          }}>
+            <Block className='projectsGrid specialContainer'>
+
+              <Block className='projectsHeader underline' style={{
+                fontSize: '36px',
+              }}>
+                <Fade>
+                  <Block>
+                    SoundShare
+                        <Block style={{
+                      backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))',
+                      height: '1px',
+                      width: '75%',
+                      margin: 'auto',
+                      gridColumn: 'span 12',
+                    }}></Block>
+                  </Block>
+                </Fade>
+              </Block>
+
+
+              <Block className='projectCard copy' style={{
+                width: '80%',
+                margin: 'auto',
+                boxSizing: 'border-box',
+                display: 'table'
+              }}>
+                <Fade left className='span-6'>
+                  <span className='projectText' style={{
+                    display: 'table-cell',
+                    verticalAlign: 'middle',
+                    textAlign: 'left',
+                  }}>
+                    SoundShare is a platform for studio musicians, bedroom producers, and music enthusiasts to collaborate regardless of geographical location. 
+                    Users will be able to host projects and have their friends or colleagues add content to that project. This gives creatives a way of furthering
+                    their art without having to travel to record with their bandmates.  <br />
+
+                    This project was built using <span className='special'>React.js</span> with an additional <span className='special'>NodeJS</span> server. Additionally,
+                    app makes use of Google's <span className='special'>Firebase API</span> to quickly setup new users and store account information. 
+                    <span className='special'>MongoDB</span> is used to store the related project information for this project.
+                    </span>
+                </Fade>
+              </Block>
+
+
+              <Block className='projectCard' style={{
+                boxSizing: 'border-box',
+                width: '80%',
+                margin: 'auto',
+                padding: '0 0 20% 0',
+              }}>
+                <Block className='span-12 project' style={{
+                  height: '50%',
+                  width: '100%',
+                  margin: 'auto',
+                  marginBottom: '12px',
+                  marginTop: '10%',
+                  background: 'url("https://res.cloudinary.com/ckportfolio/image/upload/v1568557903/Screenshot_from_2019-09-15_10-30-13.png") no-repeat',
+                  backgroundSize: '100% auto',
+                  backgroundPosition: 'center',
+                  backgroundColor: '#fff',
+                  boxShadow: '5px 8px 32px -4px rgba(0,0,0,0.67)',
+
+                }}
+                >
+                  {/* <Block className='projectOverlay' onClick={() => window.open('https://dozr.com/supplier')}>
+                    <Block className='overlayText' style={{
+                      verticalAlign: 'middle',
+                    }}>
+                      <span className='overlayLinkDozr' onClick={() => window.open('https://dozr.com/supplier')}>
+                        Check it out! <FontAwesomeIcon icon={faChevronRight} size='lg' style={{
+                          paddingLeft: '8px',
+                        }} />
+                      </span>
+                    </Block>
+                  </Block> */}
+                </Block>
+
+                <Block className='span-12 project' style={{
+                  height: '50%',
+                  width: '100%',
+                  margin: 'auto',
+                  marginBottom: '12px',
+                  background: 'url("https://res.cloudinary.com/ckportfolio/image/upload/v1568557903/Screenshot_from_2019-09-15_10-30-01.png") no-repeat',
+                  backgroundSize: '100% auto',
+                  backgroundPosition: 'center',
+                  backgroundColor: '#fff',
+                  boxShadow: '5px 8px 32px -4px rgba(0,0,0,0.67)',
+
+                }}
+                >
+                  {/* <Block className='projectOverlay' onClick={() => window.open('https://dozr.com/login')}>
+                    <Block className='overlayText' style={{
+                      verticalAlign: 'middle',
+                    }}>
+                      <span className='overlayLinkDozr'>
+                        Check it out! <FontAwesomeIcon icon={faChevronRight} size='lg' style={{
+                          paddingLeft: '8px',
+                        }} />
+                      </span>
+
+                    </Block>
+                  </Block> */}
+
+                </Block>
+
+
+
+              </Block>
+
+
+
+            </Block>
+          </Block>
+
+          <Block className='projectCard' style={{
+            background: 'url("https://res.cloudinary.com/ckportfolio/image/upload/v1568557903/Screenshot_from_2019-09-15_10-30-29.png") no-repeat',
+            backgroundSize: '80% auto',
+            backgroundPosition: 'center',
+            backgroundColor: '#387aff',
+
+          }}>
+            <Block className='projectOverlay'>
+              <Block className='overlayText dozrOverlay'>
+                <Block className='toolsUsedHeader'>
+                  Built with...
+                </Block>
+                <img src='https://i.imgur.com/qLgizjN.png' style={{
+                  maxWidth: '33%',
+                  maxHeight: '35%',
+                  margin: 'auto',
+                  display: 'inline',
+                  padding: '8px',
+                  marginTop: '5%',
+                }} alt='' />
+                <img src='https://i.imgur.com/9bRalzr.png' style={{
+                  maxWidth: '33%',
+                  maxHeight: '35%',
+                  margin: 'auto',
+                  display: 'inline',
+                  padding: '8px',
+                  marginTop: '5%',
+                }} alt='' />
+                <img src='https://res.cloudinary.com/ckportfolio/image/upload/v1568558440/firebase.png' style={{
+                  maxWidth: '33%',
+                  maxHeight: '200px',
+                  margin: 'auto',
+                  display: 'inline',
+                  padding: '8px',
+                  marginTop: '5%',
+                }} alt='' />
+              </Block>
+            </Block>
+          </Block>
+
           <Block className='projectCard' style={{
               background: 'url("https://i.imgur.com/GsXG51J.png") no-repeat',
               backgroundSize: '80% auto',

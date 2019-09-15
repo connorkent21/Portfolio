@@ -24,7 +24,7 @@ const styles = {
     display: 'table-cell',
     verticalAlign: 'middle',
     background: 'transparent',
-    color: '#f6f1ed !important',
+    color: '#387aff !important',
   },
   title: {
     color: '#f6f1ed !important',
@@ -56,7 +56,7 @@ const theme = createMuiTheme({
   palette: {
     type: 'dark',
     primary: {
-      main: '#f6f1ed',
+      main: '#387aff',
     },
     secondary: {
       main:'#001f3f'
@@ -127,94 +127,115 @@ class About extends Component {
                         <div className='topOfCard'>
                           <ul className='cardList'>
                             <li className='handPoint'>
-                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>WEB DEV</p>
+                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#387aff'}}/></span>WEB DEV</p>
                                 <ul className='cardList'>
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>JavaScript</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>JavaScript</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>HTML5</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>React.js</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>CSS3</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>MobX</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>React.js</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>CSS3/SCSS</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Node.js</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>Node.js</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Material-ui</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>GraphQL</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Bootstrap</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>Python</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>JQuery</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>HTML5</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>MongoDB</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>Material-ui</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>RESTful API</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>Bootstrap</p>
+                                  </li>
+
+                                  <li className='handPoint'>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>JQuery</p>
+                                  </li>
+
+                                  <li className='handPoint'>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>MongoDB</p>
+                                  </li>
+
+                                  <li className='handPoint'>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>MySQL</p>
+                                  </li>
+
+                                  <li className='handPoint'>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>REST API</p>
                                   </li>
 
                                 </ul>
                             </li>
 
                             <li className='handPoint'>
-                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Data</p>
+                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#387aff'}}/></span>Data</p>
 
                                 <ul className='cardList'>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Python</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>Python</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Data-Pipelines</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>Data-Pipelines</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Web-Scraping</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>Web-Scraping</p>
                                   </li>
 
                                 </ul>
                             </li>
 
                             <li className='handPoint'>
-                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Backend</p>
+                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#387aff'}}/></span>Backend</p>
 
                                 <ul className='cardList'>
 
+
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>C++</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>GoLang</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Python</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>Python</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>JavaScript</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>C++</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Java</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>JavaScript</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>C</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>Java</p>
+                                  </li>
+
+                                  <li className='handPoint'>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>C</p>
                                   </li>
 
 
@@ -223,16 +244,16 @@ class About extends Component {
                             </li>
 
                             <li className='handPoint'>
-                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Mobile</p>
+                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#387aff'}}/></span>Mobile</p>
 
                                 <ul className='cardList'>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>React Native</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>React Native</p>
                                   </li>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet'><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Java</p>
+                                    <p className='subBullet'><span style={{marginRight: '8px'}}>-</span>Java</p>
                                   </li>
 
                                 </ul>
@@ -267,37 +288,37 @@ class About extends Component {
                         <div className='topOfCard'>
                           <ul className='cardList'>
                             <li className='handPoint'>
-                              <p style={{marginBottom: '0px'}}><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>DOZR</p>
+                              <p style={{marginBottom: '0px'}}><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#387aff'}}/></span>Chatkit</p>
                                 <ul className='cardList'>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet' style={{marginTop: '4px'}}><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Software Engineer</p>
+                                    <p className='subBullet' style={{marginTop: '4px'}}><span style={{marginRight: '8px'}}>-</span>Full-Stack Software Developer</p>
+                                  </li>
+
+                                </ul>
+                            </li>
+                            <li className='handPoint'>
+                              <p style={{marginBottom: '0px'}}><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#387aff'}}/></span>DOZR</p>
+                                <ul className='cardList'>
+
+                                  <li className='handPoint'>
+                                    <p className='subBullet' style={{marginTop: '4px'}}><span style={{marginRight: '8px'}}>-</span>Software Engineer</p>
                                   </li>
 
                                 </ul>
                             </li>
 
                             <li className='handPoint'>
-                              <p style={{marginBottom: '0px'}}><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Bank Of Montreal</p>
+                              <p style={{marginBottom: '0px'}}><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#387aff'}}/></span>Bank Of Montreal</p>
                                 <ul className='cardList'>
 
                                   <li className='handPoint'>
-                                    <p className='subBullet' style={{marginTop: '4px'}}><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>IT Operations Analyst</p>
+                                    <p className='subBullet' style={{marginTop: '4px'}}><span style={{marginRight: '8px'}}>-</span>IT Operations Analyst</p>
                                   </li>
 
                                 </ul>
                             </li>
 
-                            <li className='handPoint'>
-                            <p style={{marginBottom: '0px'}}><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>McGrathBoyd</p>
-                              <ul className='cardList'>
-
-                                <li className='handPoint'>
-                                  <p className='subBullet' style={{marginTop: '4px'}}><span style={{marginRight: '8px', color: '#915e5e'}}>-</span>Legal Secretary</p>
-                                </li>
-
-                              </ul>
-                            </li>
                           </ul>
                         </div>
 
@@ -327,18 +348,18 @@ class About extends Component {
                         <div className='topOfCard'>
                           <ul className='cardList'>
                             <li className='handPoint'>
-                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Ping Pong <FontAwesomeIcon icon={faTableTennis} size='lg' style={{marginLeft: '4px'}}/></p>
+                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#387aff'}}/></span>Ping Pong <FontAwesomeIcon icon={faTableTennis} size='lg' style={{marginLeft: '4px'}}/></p>
                             </li>
 
                             <li className='handPoint'>
-                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Audio Production <FontAwesomeIcon icon={faSoundcloud} size='lg' style={{marginLeft: '4px'}}/></p>
+                              <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#387aff'}}/></span>Audio Production <FontAwesomeIcon icon={faSoundcloud} size='lg' style={{marginLeft: '4px'}}/></p>
                             </li>
 
                             <li className='handPoint'>
-                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Guitar <FontAwesomeIcon icon={faMusic} size='lg' style={{marginLeft: '4px'}}/></p>
+                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#387aff'}}/></span>Guitar <FontAwesomeIcon icon={faMusic} size='lg' style={{marginLeft: '4px'}}/></p>
 
                             <li className='handPoint'>
-                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#915e5e'}}/></span>Hockey <FontAwesomeIcon icon={faHockeyPuck} size='lg' style={{marginLeft: '4px'}}/></p>
+                            <p><span style={{marginRight: '8px'}}><FontAwesomeIcon icon={faChevronCircleRight} size='1.5x' style={{color: '#387aff'}}/></span>Hockey <FontAwesomeIcon icon={faHockeyPuck} size='lg' style={{marginLeft: '4px'}}/></p>
                             </li>
 
 

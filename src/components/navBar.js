@@ -1,131 +1,135 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons';
-import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
-
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
+import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
 
 const styles = {
   root: {
     flexGrow: 1,
-    position: 'absolute',
+    position: "absolute",
     top: 0,
-    left: 0,
+    left: 0
   },
   appBar: {
-    transition: 'all .5s',
-    background: 'transparent',
-    right: 'auto !important',
-    width: '100vw !important',
+    transition: "all .5s",
+    background: "transparent",
+    right: "auto !important",
+    width: "100vw !important"
   },
   transparentBar: {
-    background: 'rgba(246,241,237, 0.8)',
+    background: "rgba(246,241,237, 0.8)"
   },
   grow: {
     flexGrow: 1,
     fontFamily: "'Slabo 27px', serif",
-    fontSize: '2rem',
-    fontWeight: 500,
+    fontSize: "2rem",
+    fontWeight: 500
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20,
-  },
+    marginRight: 20
+  }
 };
 
 const theme = createMuiTheme({
   palette: {
-    type: 'dark',
+    type: "dark",
     primary: {
-      main: '#f6f1ed',
+      main: "#f6f1ed"
     },
     secondary: {
-      main:'#001f3f'
+      main: "#387aff"
     }
-  },
-})
+  }
+});
 
 function NavBar(props) {
   const { classes } = props;
   return (
     <MuiThemeProvider theme={theme}>
       <div className={classes.root}>
-        <AppBar position="fixed" className={props.onTop ? classes.appBar : `${classes.appBar} ${classes.transparentBar}`}>
+        <AppBar
+          position="fixed"
+          className={
+            props.onTop
+              ? classes.appBar
+              : `${classes.appBar} ${classes.transparentBar}`
+          }
+        >
           <Toolbar>
             <Typography
               variant="h6"
-              color={props.onTop ? 'primary' : "inherit"}
+              color={props.onTop ? "primary" : "secondary"}
               className={`${classes.grow} homeButton`}
               onClick={() => {
                 window.scrollTo({
                   top: 0,
-                  behavior: 'smooth',
+                  behavior: "smooth"
                 });
               }}
-              >
+            >
               C K
             </Typography>
 
-
-
-
-            <Typography color={props.onTop ? 'primary' : "inherit"} >
+            <Typography color={props.onTop ? "primary" : "secondary"}>
               <FontAwesomeIcon
                 icon={faLinkedin}
-                size='3x'
+                size="3x"
                 className={`navBarButton`}
                 onClick={() => {
-                  window.open('https://www.linkedin.com/in/connorkent1/');
+                  window.open("https://www.linkedin.com/in/connorkent1/");
                 }}
               />
-          </Typography>
-          <div style={{
-              width: '20px',
-              background: 'transparent',
-            }}
-          />
-
-          <Typography color={props.onTop ? 'primary' : "inherit"} >
-            <FontAwesomeIcon
-              icon={faGithubSquare}
-              size='3x'
-              className={`navBarButton`}
-              onClick={() => {
-                window.open('https://github.com/connorkent21');
+            </Typography>
+            <div
+              style={{
+                width: "20px",
+                background: "transparent"
               }}
             />
-        </Typography>
-        <div style={{
-            width: '20px',
-            background: 'transparent',
-          }}
-        />
 
-        <Typography color={props.onTop ? 'primary' : "inherit"} >
-          <FontAwesomeIcon
-            icon={faAddressCard}
-            size='3x'
-            className={`navBarButton`}
-            onClick={() => {
-              props.page.setState({showContact: true});
-            }}
-          />
-      </Typography>
+            <Typography color={props.onTop ? "primary" : "secondary"}>
+              <FontAwesomeIcon
+                icon={faGithubSquare}
+                size="3x"
+                className={`navBarButton`}
+                onClick={() => {
+                  window.open("https://github.com/connorkent21");
+                }}
+              />
+            </Typography>
+            <div
+              style={{
+                width: "20px",
+                background: "transparent"
+              }}
+            />
+
+            <Typography color={props.onTop ? "primary" : "secondary"}>
+              <FontAwesomeIcon
+                icon={faAddressCard}
+                size="3x"
+                className={`navBarButton`}
+                onClick={() => {
+                  props.page.setState({ showContact: true });
+                }}
+              />
+            </Typography>
           </Toolbar>
         </AppBar>
       </div>
     </MuiThemeProvider>
-
   );
 }
 
 NavBar.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(NavBar);
